@@ -1,0 +1,13 @@
+(MainThread) 200314_17:42:51.513 ERROR wrapper.py:56 ERROR -1 2104 La conexión al centro de datos funciona correctamente:usfarm.nj
+(MainThread) 200314_17:42:51.514 ERROR wrapper.py:56 ERROR -1 2104 La conexión al centro de datos funciona correctamente:eufarm
+(MainThread) 200314_17:42:51.515 ERROR wrapper.py:56 ERROR -1 2104 La conexión al centro de datos funciona correctamente:cashfarm
+(MainThread) 200314_17:42:51.515 ERROR wrapper.py:56 ERROR -1 2104 La conexión al centro de datos funciona correctamente:usopt
+(MainThread) 200314_17:42:51.515 ERROR wrapper.py:56 ERROR -1 2104 La conexión al centro de datos funciona correctamente:usfarm
+(MainThread) 200314_17:42:51.515 ERROR wrapper.py:56 ERROR -1 2106 La conexión al centro de datos HMDS funciona correctamente:cashhmds
+(MainThread) 200314_17:42:51.515 ERROR wrapper.py:56 ERROR -1 2106 La conexión al centro de datos HMDS funciona correctamente:ushmds
+(MainThread) 200314_17:42:51.516 ERROR wrapper.py:56 ERROR -1 2158 Sec-def data farm connection is OK:secdefnj
+(MainThread) 200314_17:42:51.941 ERROR wrapper.py:56 ERROR 5003 200 No se encuentra definición del activo solicitado
+(MainThread) 200314_17:42:51.941 ERROR wrapper.py:56 ERROR 5001 200 No se encuentra definición del activo solicitado
+(MainThread) 200314_17:42:51.942 ERROR wrapper.py:56 ERROR 5002 200 No se encuentra definición del activo solicitado
+(MainThread) 200314_17:43:22.890 ERROR wrapper.py:56 ERROR 2001 310 No se puede encontrar la profundidad de mercado suscrita para tickerId:2001
+(MainThread) 200314_17:43:22.891 ERROR wrapper.py:56 ERROR 2002 310 No se puede encontrar la profundidad de mercado suscrita para tickerId:2002

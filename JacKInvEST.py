@@ -158,12 +158,20 @@ class TestApp(EWrapper, EClient):
     def ColocarOrden(self, PrecioMkt): # NOO ESTA EN USO
         # Tipo de contrato
         contract = Contract()
-        contract.symbol = "EUR"
-        contract.secType = "CASH"
-        contract.exchange = 'IDEALPRO'
+        # contract.symbol = "EUR"
+        # contract.secType = "CASH"
+        # contract.exchange = 'IDEALPRO'
+        # contract.currency = "USD"
+        contract.symbol = "AMD"
+        contract.secType = "OPT"
+        contract.lastTradeDateOrContractMonth = '20200501'
+        contract.exchange = 'SMART'
         contract.currency = "USD"
+        contract.multiplier = '100'
+        contract.strike = '57'
+        contract.right = 'C'
 
-        bracket = self.BracketOrder(self.nextValidId, "BUY", 100, 0, round(PrecioMkt*1.2,3), round(PrecioMkt*0.9,3))
+        bracket = self.BracketOrder(self.nextValidId, "BUY", 1, 0, round(PrecioMkt*1.2,3), round(PrecioMkt*0.9,3))
         for o in bracket:
             self.placeOrder(o.orderId, contract, o)
             self.nextValidId
@@ -285,19 +293,19 @@ def main():
     app.connect('127.0.0.1', 7497, 0)
     print(app.isConnected(), app.CONNECTED, app.twsConnectionTime())
     contract = Contract()
-    contract.symbol = "AMD"
-    contract.secType = "STK"
-    contract.currency = "USD"
-    contract.exchange = "SMART"
-    # contract.symbol = "EUR"
-    # contract.secType = "CASH"
-    # contract.exchange = 'IDEALPRO'
+    # contract.symbol = "AMD"
+    # contract.secType = "STK"
     # contract.currency = "USD"
+    # contract.exchange = "SMART"
+    contract.symbol = "EUR"
+    contract.secType = "CASH"
+    contract.exchange = 'IDEALPRO'
+    contract.currency = "USD"
 
-    app.reqHistoricalData(1, contract, '', '1 D', '1 min', 'MIDPOINT', 0, 1, True, [])
+    app.reqHistoricalData(1, contract, '', '1 M', '1 min', 'MIDPOINT', 0, 1, True, [])
     # app.reqContractDetails(2, contract.OptionForQuery())
-    app.reqSecDefOptParams(2, "IBM", "", "STK", 8314)
-    app.reqMktData(13, contract, "", False, False, [])
+    # app.reqSecDefOptParams(2, "IBM", "", "STK", 8314)
+    # app.reqMktData(13, contract, "233", False, False, [])
     # Timer(20, app.stop).start()
     app.run()
 

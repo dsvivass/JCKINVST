@@ -9,8 +9,10 @@ from sklearn.pipeline import Pipeline
 import seaborn as sns
 import matplotlib.pyplot as plt
 import math
+import time
 
 # FUNCIONES
+tini = time.time()
 
 def OrganizadorDfDia(archivo):
     df_dia = pd.read_csv(archivo, names = ['Fecha', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre'], usecols=list(range(1,6)))
@@ -66,9 +68,12 @@ def MejorAjuste(gradoPol, alpha, cv, x, y):
           f'media r2 pruebas: {mean_testR}') # , normalizado, {norm}
     return gradoR, paramR
 
-x = df[['08:30:00','08:31:00','08:32:00','08:33:00','08:34:00']] # ,'09:10:00','09:15:00','09:20:00','09:25:00','09:30:00','09:35:00'
-y = df[['08:35:00']]
+x = df[['09:00:00', '09:01:00', '09:02:00']] # ,'09:10:00','09:15:00','09:20:00','09:25:00','09:30:00','09:35:00'
+y = df[['09:15:00']]
+tini2 = time.time()
+print(tini2)
 MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,20)), alpha=[1], cv=4, x=x, y=y)
+print('MEJOR AJUSTE: ',time.time()-tini2)
 
 # MejorAjuste()
 #
@@ -99,7 +104,7 @@ for col in df.columns:
     grid.fit(x, df[col])
     # scores = grid.cv_results_
     # print(scores)
-    Predict = grid.predict(df_org[['08:30:00','08:31:00','08:32:00','08:33:00','08:34:00']])
+    Predict = grid.predict(df_org[['09:00:00', '09:01:00', '09:02:00']])
 
     ax.plot(col,Predict,'ro', label='Datos Inteligencia Artificial')
     ax.plot(col,df_org[col],'bo', label='Datos Reales')
@@ -112,3 +117,5 @@ custom_lines = [Line2D([0], [0], color='blue', lw=4),
 ax.legend(custom_lines, ['Datos Reales', 'Datos Inteligencia Artificial'])
 ax.yaxis.set_major_formatter(FormatStrFormatter('%.5f'))
 plt.show()
+
+print(time.time()-tini)

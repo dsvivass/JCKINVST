@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a7c61cd7-3350-4667-a07b-64c11425803a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/EUR_USD/DH20200416.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/EUR_USD_TEST/DH20200416.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/GeneradorDatos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorDatos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL2/DH20200423.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200423.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20101026.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101026.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IA/IAJacKInvEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/IAJacKInvEST.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JacKInvEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/JacKInvEST.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,19 +19,19 @@
   <component name="ProjectId" id="1ZE8u510a1eWgOX3EFktT6RHn5Z" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/IA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/EUR_USD_TEST" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL" />
-      <recent name="$PROJECT_DIR$/IA" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/IA" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/EUR_USD_TEST" />
+      <recent name="$PROJECT_DIR$/IA" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -47,7 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.JacKInvEST">
+  <component name="RunManager" selected="Python.IAJacKInvEST">
     <configuration name="DatosHistoricos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,9 +159,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.IAJacKInvEST" />
         <item itemvalue="Python.JacKInvEST" />
         <item itemvalue="Python.GeneradorDatos" />
-        <item itemvalue="Python.IAJacKInvEST" />
         <item itemvalue="Python.GeneradorDatos2" />
         <item itemvalue="Python.DatosHistoricos" />
       </list>
@@ -183,6 +182,7 @@
       <workItem from="1587839550895" duration="44046000" />
       <workItem from="1587959148771" duration="959000" />
       <workItem from="1587999215301" duration="11562000" />
+      <workItem from="1588014330419" duration="3776000" />
     </task>
     <servers />
   </component>
@@ -214,9 +214,9 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1588013764420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1588014410416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos2.coverage" NAME="GeneradorDatos2 Coverage Results" MODIFIED="1587947417326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST.coverage" NAME="IAJacKInvEST Coverage Results" MODIFIED="1587999242041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST.coverage" NAME="IAJacKInvEST Coverage Results" MODIFIED="1588022425042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$DatosHistoricos.coverage" NAME="DatosHistoricos Coverage Results" MODIFIED="1584393168012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1588000504022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
   </component>

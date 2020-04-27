@@ -9,7 +9,7 @@ nombre_archivo = None
 # CREACION DE DIRECTORIO PARA ESCRITURA DE ARCHIVOS .TXT
 DirActual = os.getcwd() # DirActual
 os.chdir('DatosHistoricos') # Cambio de directorio
-os.chdir('EUR_USD2') # Cambio subdirectorio
+os.chdir('AMD') # Cambio subdirectorio
 EstadoConexion = False
 # os.mkdir(NombreDataFrame[:-4]) # Creacion de directorio
 # os.chdir(NombreDataFrame[:-4]) # Cambio a subdirectorio
@@ -47,14 +47,14 @@ def main():
     app = TestApp()
     app.connect('127.0.0.1', 7497, 0)
     contract = Contract()
-    # contract.symbol = "AMD"
-    # contract.secType = "STK"
-    # contract.currency = "USD"
-    # contract.exchange = "SMART"
-    contract.symbol = "EUR"
-    contract.secType = "CASH"
-    contract.exchange = 'IDEALPRO'
+    contract.symbol = "AMD"
+    contract.secType = "STK"
     contract.currency = "USD"
+    contract.exchange = "SMART"
+    # contract.symbol = "EUR"
+    # contract.secType = "CASH"
+    # contract.exchange = 'IDEALPRO'
+    # contract.currency = "USD"
 
     app.reqHistoricalData(1, contract, '', '3 M', '1 min', 'MIDPOINT', 0, 1, True, [])
     app.run()

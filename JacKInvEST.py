@@ -17,11 +17,14 @@ import os
 
 
 #VARIABLES GLOBALES
+EstadoConexion = False
+PrecioMkt = 0
 Data = pd.DataFrame(columns=['contractDetails: ', 'Fecha: ', 'Punto alto: ', 'Punto bajo: ', 'Punto apertura: ', 'Punto cierre: '])
 # Columnas
 ColOrderStatus= ['ID de orden: ', 'Fecha: ', 'parentId: ', 'permId: ', 'clientId: ', 'Estado: ', 'Ejecutado: ', 'Pendiente: ',
                  'PrecioPromLLenado: ', 'UltimpoPrecioLLenado: '] # Columnas de df de OrderStatus
 DataOrderStatus = pd.DataFrame(columns=ColOrderStatus)
+DataOrderStatus.loc['0'] = 0
 ult_bar_date = None
 ult_Dat = list()
 checker = None # Si hay una orden abierta es 1 sino es None
@@ -42,6 +45,8 @@ class TestApp(EWrapper, EClient):
         EClient.__init__(self, self)
 
     def error(self, reqId, errorCode, errorString):
+        global EstadoConexion
+        EstadoConexion = True  # Variable de prueba para que el codigo entre solo
         print('Error: ', reqId, ' ', errorCode, ' ', errorString)
 
     # -------------------------------------------------------- #
@@ -51,17 +56,17 @@ class TestApp(EWrapper, EClient):
     def historicalData(self, reqId, bar):
         global Data
         global compra
-        print('contractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
-              bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
+        # print('contractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
+        #       bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
         Dat = [reqId, bar.date, bar.high, bar.low, bar.open, bar.close] #Lista de datos del dia
         self.DataFrameHistoric(Dat) # Guarda los datos en un Dataframe y en un .txt
 
 
     def historicalDataUpdate(self, reqId, bar):
-        global Data, ult_bar_date, ult_Dat, checker, DataOrderStatus
+        global Data, ult_bar_date, ult_Dat, checker, DataOrderStatus, PrecioMkt
 
-        print('AcontractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
-              bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
+        # print('AcontractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
+        #       bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
         if bar.date != ult_bar_date and ult_bar_date is not None:
             self.DataFrameHistoricUpdate(ult_Dat) # Concatena los datos en el Dataframe creado previamente y en el .txt
             if Data.iloc[-1]['Fecha: '] == Data.iloc[-2]['Fecha: ']:
@@ -69,15 +74,20 @@ class TestApp(EWrapper, EClient):
 
         ult_bar_date = bar.date
         ult_Dat = [reqId, bar.date, bar.high, bar.low, bar.open, bar.close]
-
+        print(checker)
         # Condicion para llamar a metodo de Colocacion de ordenes
-        if Data['Punto cierre: '].iloc[-1] > 1.075 and checker is None:
+        if Data['Punto cierre: '].iloc[-1] > 1.075 and checker is None :
             PrecioMkt = Data['Punto cierre: '].iloc[-1]
             checker = 1
+            # print('------DENTROOOOOO------')
             self.ColocarOrden(PrecioMkt) # Coloca una orden a precio MKT
 
-        elif checker == 1 and DataOrderStatus['Estado: '].iloc[-1] == 'Filled':
+        elif checker == 1 and (DataOrderStatus['Estado: '].iloc[-1] == 'Filled' or DataOrderStatus['Estado: '].iloc[-1] == 'Cancelled'):
             checker = None
+
+        elif checker == 1:
+            self.ActualizarOrden(PrecioMkt)
+
 
             # contract = Contract()
             # contract.symbol = "EUR"
@@ -117,20 +127,20 @@ class TestApp(EWrapper, EClient):
     def orderStatus(self, orderId , status, filled, remaining, avgFillPrice, permId, parentId, lastFillPrice, clientId,
                     whyHeld, mktCapPrice):
         fecha = self.FechaHoraActual()
-        print('ID de orden: ', orderId, 'Fecha: ', fecha, 'parentId', parentId, 'permId', permId, 'clientId', clientId, 'Estado: ', status, 'Ejecutado: ',
-              filled, 'Pendiente: ', remaining, 'PrecioPromEjecutado: ', avgFillPrice, 'UltimpoPrecioLLenado: ', lastFillPrice)
+        # print('ID de orden: ', orderId, 'Fecha: ', fecha, 'parentId', parentId, 'permId', permId, 'clientId', clientId, 'Estado: ', status, 'Ejecutado: ',
+        #       filled, 'Pendiente: ', remaining, 'PrecioPromEjecutado: ', avgFillPrice, 'UltimpoPrecioLLenado: ', lastFillPrice)
         DatosOrderStatus = [orderId, fecha, parentId,  permId, clientId, status, filled, remaining, avgFillPrice,  lastFillPrice]
         self.DataFrameOrderStatus(DatosOrderStatus) # Guarda los datos en un Dataframe y en un .txt
 
     def openOrder(self, orderId, contract, order, orderState):
         fecha = self.FechaHoraActual()
-        print('Orden abierta: ', orderId, 'Fecha: ', fecha, 'Contrato: ', contract.symbol, contract.secType, contract.currency, 'Estado de orden: ', orderState.status)
+        # print('Orden abierta: ', orderId, 'Fecha: ', fecha, 'Contrato: ', contract.symbol, contract.secType, contract.currency, 'Estado de orden: ', orderState.status)
         DatosOpenOrder = [orderId, fecha, contract.symbol, contract.secType, contract.currency, orderState.status]
         self.DataFrameOpenOrder(DatosOpenOrder) # Guarda los datos en un .txt
 
     def execDetails(self, reqId, contract, execution):
-        print('ID: ', execution.orderId, 'Fecha: ', execution.time, 'Contrato: ', contract.symbol, contract.secType, contract.currency, 'Numero de intercambios: ', execution.shares,
-              'Precio', execution.price)
+        # print('ID: ', execution.orderId, 'Fecha: ', execution.time, 'Contrato: ', contract.symbol, contract.secType, contract.currency, 'Numero de intercambios: ', execution.shares,
+        #       'Precio', execution.price)
         DatosExecDetails = [execution.orderId, execution.time, contract.symbol, contract.secType, contract.currency, execution.shares, execution.price]
         self.DataFrameExecDetails(DatosExecDetails) # Guarda los datos en un .txt
 
@@ -149,7 +159,6 @@ class TestApp(EWrapper, EClient):
 
     def tickPrice(self, tickerId, field, price, attribs):
         print('PRUEBAAA', 'A', tickerId, 'B', field,'C', price,'D', attribs)
-        a = input('Señor, que opcion desea utilizar')
 
         # -------------------------------------------------------- #
     #           COLOCACION DE ORDENES EN EL MERCADO            #
@@ -158,21 +167,43 @@ class TestApp(EWrapper, EClient):
     def ColocarOrden(self, PrecioMkt): # NOO ESTA EN USO
         # Tipo de contrato
         contract = Contract()
-        # contract.symbol = "EUR"
-        # contract.secType = "CASH"
-        # contract.exchange = 'IDEALPRO'
-        # contract.currency = "USD"
-        contract.symbol = "AMD"
-        contract.secType = "OPT"
-        contract.lastTradeDateOrContractMonth = '20200501'
-        contract.exchange = 'SMART'
+        contract.symbol = "EUR"
+        contract.secType = "CASH"
+        contract.exchange = 'IDEALPRO'
         contract.currency = "USD"
-        contract.multiplier = '100'
-        contract.strike = '57'
-        contract.right = 'C'
 
-        bracket = self.BracketOrder(self.nextValidId, "BUY", 1, 0, round(PrecioMkt*1.2,3), round(PrecioMkt*0.9,3))
+        # contract.symbol = "AMD"
+        # contract.secType = "OPT"
+        # contract.lastTradeDateOrContractMonth = '20200501'
+        # contract.exchange = 'SMART'
+        # contract.currency = "USD"
+        # contract.multiplier = '100'
+        # contract.strike = '57'
+        # contract.right = 'C'
+
+        # contract.symbol = "AMD"
+        # contract.secType = "STK"
+        # contract.currency = "USD"
+        # contract.exchange = "SMART"
+
+        bracket = self.BracketOrder(self.nextValidId, "BUY", 10, 0, round(PrecioMkt*1.2,3), round(PrecioMkt*0.9,3))
         for o in bracket:
+            # print('COLOCAR OOORDEN', o.orderId)
+            self.placeOrder(o.orderId, contract, o)
+            self.nextValidId
+
+    def ActualizarOrden(self, PrecioMkt):
+        contract = Contract()
+        contract.symbol = "EUR"
+        contract.secType = "CASH"
+        contract.exchange = 'IDEALPRO'
+        contract.currency = "USD"
+
+        bracket = self.BracketOrder(self.nextValidId, "BUY", 10, 0, round(PrecioMkt * 1.2, 3),
+                                    round(PrecioMkt * 0.9, 3))
+        print(bracket)
+        for o in bracket:
+            # print('ACTUALIZAR OOORDEN', o.orderId)
             self.placeOrder(o.orderId, contract, o)
             self.nextValidId
 
@@ -234,7 +265,7 @@ class TestApp(EWrapper, EClient):
         self.disconnect()
         global Data
         global DataOrderStatus
-        # Data = pd.DataFrame(Info).drop([0]).rename(columns = 
+        # Data = pd.DataFrame(Info).drop([0]).rename(columns =
         # {0 : 'contractDetails: ', 1 : 'Fecha: ', 2 : 'Punto alto: ', 3 : 'Punto bajo: ', 4 : 'Punto apertura: ', 5 : 'Punto cierre: '})
         print(Data, DataOrderStatus, DataOrderStatus['ID de orden: '])
         f = interp1d(list(Data.index), Data['Punto cierre: '], kind='cubic')
@@ -262,6 +293,8 @@ class TestApp(EWrapper, EClient):
     def DataFrameOrderStatus(self, DatosOrderStatus): # Guarda en el Dataframe los datos de los estados de orden
         global ColOrderStatus, DataOrderStatus, NombreDataFrameOrderStatus
         DataOrderStatus = DataOrderStatus.append({i:j for i,j in zip(ColOrderStatus, DatosOrderStatus)}, ignore_index=True) # Concatena la lista de datos
+        # print('----------------------------------------------------------------------------------------------')
+        # print(DataOrderStatus['Estado: '])
 
         with open(NombreDataFrameOrderStatus, 'a+') as archivo:
             archivo.write(f'{DatosOrderStatus[0]},{DatosOrderStatus[1]},{DatosOrderStatus[2]},{DatosOrderStatus[3]},'
@@ -289,26 +322,40 @@ class TestApp(EWrapper, EClient):
 #     ColocarOrdenAvanzada.main()
 
 def main():
-    app = TestApp()
-    app.connect('127.0.0.1', 7497, 0)
-    print(app.isConnected(), app.CONNECTED, app.twsConnectionTime())
-    contract = Contract()
-    # contract.symbol = "AMD"
-    # contract.secType = "STK"
-    # contract.currency = "USD"
-    # contract.exchange = "SMART"
-    contract.symbol = "EUR"
-    contract.secType = "CASH"
-    contract.exchange = 'IDEALPRO'
-    contract.currency = "USD"
+    try:
+        app = TestApp()
+        app.connect('127.0.0.1', 7497, 0)
+        contract = Contract()
+        # contract.symbol = "AMD"
+        # contract.secType = "STK"
+        # contract.currency = "USD"
+        # contract.exchange = "SMART"
 
-    app.reqHistoricalData(1, contract, '', '1 M', '1 min', 'MIDPOINT', 0, 1, True, [])
-    # app.reqContractDetails(2, contract.OptionForQuery())
-    # app.reqSecDefOptParams(2, "IBM", "", "STK", 8314)
-    # app.reqMktData(13, contract, "233", False, False, [])
-    # Timer(20, app.stop).start()
-    app.run()
+        # contract.symbol = "EUR"
+        # contract.secType = "CASH"
+        # contract.exchange = 'IDEALPRO'
+        # contract.currency = "USD"
 
+        contract.symbol = "AMD"
+        contract.secType = "OPT"
+        contract.lastTradeDateOrContractMonth = '20200501'
+        contract.exchange = 'SMART'
+        contract.currency = "USD"
+        contract.multiplier = '100'
+        contract.strike = '57'
+        contract.right = 'C'
+
+        app.reqHistoricalData(1, contract, '', '1 D', '1 min', 'TRADES', 0, 1, True, [])
+        # app.reqContractDetails(7, contract.OptionForQuery())
+        app.reqSecDefOptParams(2, "AMD", "", "STK", 8314)
+        app.reqMktData(57, contract, "233", False, False, [])
+        # Timer(20, app.stop).start()
+        app.run()
+    except ConnectionResetError:
+            main()
+
+    # if EstadoConexion is False: # Mira si entra al atributo error
+    #     main()
 
 if __name__ == '__main__':
     # with concurrent.futures.ThreadPoolExecutor() as ejecutor:

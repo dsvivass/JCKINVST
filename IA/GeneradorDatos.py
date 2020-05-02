@@ -9,7 +9,7 @@ nombre_archivo = None
 # CREACION DE DIRECTORIO PARA ESCRITURA DE ARCHIVOS .TXT
 DirActual = os.getcwd() # DirActual
 os.chdir('DatosHistoricos') # Cambio de directorio
-os.chdir('AAPL') # Cambio subdirectorio
+os.chdir('AAPL6') # Cambio subdirectorio
 EstadoConexion = False
 # os.mkdir(NombreDataFrame[:-4]) # Creacion de directorio
 # os.chdir(NombreDataFrame[:-4]) # Cambio a subdirectorio
@@ -56,7 +56,7 @@ def main():
     # contract.exchange = 'IDEALPRO'
     # contract.currency = "USD"
 
-    app.reqHistoricalData(1, contract, '', '4 M', '5 mins', 'MIDPOINT', 0, 1, True, [])
+    app.reqHistoricalData(1, contract, '', '1 D', '5 mins', 'MIDPOINT', 0, 1, True, [])
     app.run()
 
     if EstadoConexion is False: # Mira si entra al atributo error

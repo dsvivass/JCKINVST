@@ -11,38 +11,38 @@ import matplotlib.pyplot as plt
 import math
 import time
 import datetime
+import mplfinance as fplt
 
 # FUNCIONES
-# tini = time.time()
+tini = time.time()
 
-def OrganizadorDfDia(archivo):
-
+def OrganizadorDfDia(archivo, horas=False):
 
     df_dia = pd.read_csv(archivo, names = ['Fecha', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre'], usecols=list(range(1,6)))
     FechaDividida = df_dia['Fecha'].str.split('  ', expand=True)
     df_dia['Fecha'] = FechaDividida[0].str.lstrip()
     df_dia['Hora'] = FechaDividida[1]
-    df_dia['Ponderado'] = (df_dia['P_alto']+df_dia['P_bajo']+df_dia['P_apert']+df_dia['P_cierre'])/4 # ECUACION CAMBIANTE
-    df_pivot = df_dia.pivot(index='Fecha', columns='Hora', values='Ponderado')
+    # df_dia['Ponderado'] = (df_dia['P_alto']+df_dia['P_bajo']+df_dia['P_apert']+df_dia['P_cierre'])/4 # ECUACION CAMBIANTE
+    # df_dia['Ponderado'] = df_dia['P_cierre']
+    if horas is not False: df_dia = df_dia[df_dia['Hora'].isin(horas)]
+    df_pivot = df_dia.pivot(index='Fecha', columns='Hora', values=['P_alto', 'P_bajo', 'P_apert', 'P_cierre'])
     return df_pivot
 
 
 def OrganizadorDfGeneral(dataFrame):
     '''Organiza por horas, limpia el DataFrame de las filas y columnas con valores NaN'''
 
+    print('[ESTADO DATAFRAME: CREANDO...]')
     dataFrame.sort_index(axis=1, inplace=True)  # Organiza Las columnas por orden de horas
-    # for i in dataFrame.index:
-    #     if math.isnan(dataFrame.loc[i, '00:00:00']) == True or math.isnan(dataFrame.loc[i, '23:59:00']) == True:
-    #         dataFrame.drop(i, inplace=True)
-    dataFrame.to_excel('/Users/dvs/Desktop/df.xlsx')
+    print('[ESTADO DATAFRAME: CREADO!]')
     return dataFrame.dropna(axis=1, how='any')
 
 
 def MejorAjuste(gradoPol, alpha, cv, x, y):
     '''Ingresar los valores en lista, menos cv (int),\n Retorna grado Polinomio y coeficiente alfa que mejor se ajusta'''
 
-
-    input = [('polinomio',PolynomialFeatures()), ('regresion', Ridge(solver='lsqr'))]
+    print('[ESTADO MEJOR AJUSTE: ANALIZANDO...]')
+    input = [('polinomio',PolynomialFeatures()), ('regresion', Ridge())]
     parametros = [{'polinomio__degree':gradoPol, 'regresion__alpha':alpha}] # 0, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000
     pipe = Pipeline(steps=input)
     grid = GridSearchCV(pipe, parametros, cv=cv, n_jobs=-1, return_train_score=True)
@@ -58,7 +58,7 @@ def MejorAjuste(gradoPol, alpha, cv, x, y):
             mean_trainR = mean_train
             mean_testR = mean_test
     # print(grid.best_estimator_)
-    print(f'[MEJOR AJUSTE CALCULADO: Grado polinomio: {gradoR}, alfa: {paramR}, media r2 entrenamiento: {mean_trainR}, '
+    print(f'[ESTADO MEJOR AJUSTE: Grado polinomio: {gradoR}, alfa: {paramR}, media r2 entrenamiento: {mean_trainR}, '
           f'media r2 pruebas: {mean_testR}]') # , normalizado, {norm}
     return gradoR, paramR
 
@@ -80,7 +80,7 @@ def CadenaHoras(year=1995, month=3, day=28, HInicial=(8,30,0), HFinal=(8,30,0), 
 
 def Graficar(DatosPredict, DatosReales):
 
-
+    print('[ESTADO GRAFICO: GRAFICANDO...]')
     ax.plot(horas, DatosPredict, 'r-', label='Datos Inteligencia Artificial')
     ax.plot(horas, DatosReales, 'b-', label='Datos Reales')
     plt.xticks(rotation=90)
@@ -91,56 +91,156 @@ def Graficar(DatosPredict, DatosReales):
     ax.legend(custom_lines, ['Datos Reales', 'Datos Inteligencia Artificial'])
     ax.yaxis.set_major_formatter(FormatStrFormatter('%.5f'))
     os.chdir(DirAct)
-    plt.savefig('fig835.png')
-    plt.show()
+    plt.grid()
+    plt.savefig('fig1015.png')
 
+def pd_graf():
+
+    for file in ls:
+        df_dia = pd.read_csv(file, names=['Fecha', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre'],
+                             usecols=list(range(1, 6)))
+        FechaDividida = df_dia['Fecha'].str.split('  ', expand=True)
+        df_dia['Fecha'] = FechaDividida[0].str.lstrip()
+        FechaDividida[1] = FechaDividida[1].str.replace(':', '-')
+        df_dia['Hora'] = FechaDividida[1]
+        return df_dia[['Hora', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre']] # .set_index(df_dia['Hora'])
 
 # LINEA PRINCIPAL
-df = pd.DataFrame() # Creacion dataframe que almacena todos los datos
+df, x = pd.DataFrame(), pd.DataFrame() # Creacion dataframe que almacena todos los datos
 DirAct = os.getcwd()
-os.chdir('DatosHistoricos/AAPL3')
+os.chdir('DatosHistoricos/AAPL4')
 ls = sorted(os.listdir())
+
+l_horas = CadenaHoras(HInicial=(4,0,0), HFinal=(8,30,0), paso_minutos=5)
 
 for file in ls:
     df_org = OrganizadorDfDia(file)
     df = df.append(df_org)
+    df_org = OrganizadorDfDia(file, l_horas)
+    x = x.append(df_org)
 
 df = OrganizadorDfGeneral(df)
 
+# pd.set_option('display.max_columns', None)
+# df2 = pd.DataFrame()
+# for i in l_horas:
+#     # df2 = df.iloc[:, df.columns.get_level_values(1) == i]
+#     df2 = pd.concat([df2,df.iloc[:, df.columns.get_level_values(1) == i]], axis=1)
 
-x = df[CadenaHoras(HInicial=(8,30,0), HFinal=(9,0,0), paso_minutos=5)]
-y = df[CadenaHoras(HInicial=(9,45,0), HFinal=(9,45,0))]
 
-MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,20)),
-                                         alpha=[1], cv=4, x=x, y=y) # 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000
+# x = df.iloc[:, df.columns.get_level_values(1)== ['04:00:00', '04:05:00']]
+# print(x)
+# y = df[CadenaHoras(HInicial=(9,45,0), HFinal=(9,45,0), paso_minutos=10)]
+# MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,5)),
+#                                          alpha=[1], cv=20, x=x, y=y) # 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000
 
 os.chdir(DirAct)
 os.chdir('DatosHistoricos/AAPL_TEST')
 ls = sorted(os.listdir())
 
 for file in ls:
-    df_org = OrganizadorDfDia(file)
+    df_org = OrganizadorDfDia(file, l_horas)
 
 # df_org = OrganizadorDfGeneral(df_org)
 
 from matplotlib.ticker import FormatStrFormatter
+df_pred = pd.DataFrame()
+
+horas = CadenaHoras(HInicial=(4,0,0), HFinal=(15,0,0), paso_minutos=5)
 fig, ax = plt.subplots()
-i, DatosReales, DatosPredict = 1, [], []
-horas = CadenaHoras(HInicial=(8,30,0), HFinal=(14,0,0))
-for hora in horas:
-    tini2 = time.time()
-    y = df[[hora]]
-    # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,20)),
-    #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=4, x=x, y=y)
+for grado in [1]:
 
-    input = [('polinomio',PolynomialFeatures(degree=MejorGrado)), ('regresion', Ridge(alpha=MejorAlpha))]
-    pipe = Pipeline(steps=input)
-    pipe.fit(x, y)
-    Predict = pipe.predict(df_org[x.columns])
+    i, DatosReales, DatosPredict = 1, [], []
+    for hora in horas:
+        tini2 = time.time()
+        y = df.iloc[:,df.columns.get_level_values(1)==hora]
+        # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,20)),
+        #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=4, x=x, y=y)
 
-    DatosPredict.append(Predict[0][0])
-    DatosReales.append(df_org.loc[df_org.index[0], hora])
-    print(f'[MEJOR AJUSTE: {i} de {len(horas)}], Tiempo iteracion {time.time() - tini2}: ', )
-    i=i+1
+        input = [('escala', StandardScaler()), ('polinomio',PolynomialFeatures(degree=grado)), ('regresion', Ridge(alpha=1))]
+        pipe = Pipeline(steps=input)
+        pipe.fit(x, y)
+        Predict = pipe.predict(df_org[x.columns])
 
-Graficar(DatosPredict, DatosReales)
+        DatosPredict.append(Predict[0][0])
+        print(Predict)
+        df_pred = df_pred.append(pd.DataFrame(Predict), ignore_index=True)
+        # print(Predict)
+        # DatosReales.append(df_org.loc[df_org.index[0], hora])
+        i=i+1
+
+    df_pred.rename(columns={0:'P_alto', 1:'P_bajo', 2:'P_apert', 3: 'P_cierre'}, inplace=True)
+    df_pred['Hora'] = 0
+    df_pred = df_pred[['Hora', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre']]
+    # print(df_pred)
+
+    # df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
+    dat = pd_graf()
+    print(dat)
+    # dat.set_index(dat['Hora'], inplace=True)
+
+    reformatted_data1 = dict()
+    reformatted_data1['Date'] = []
+    reformatted_data1['Open'] = []
+    reformatted_data1['High'] = []
+    reformatted_data1['Low'] = []
+    reformatted_data1['Close'] = []
+
+    # print(dat, dat.index, dat.columns)
+    # print('asas', dat.iloc[0,1])
+
+    for i in range(len(df_pred)):
+        reformatted_data1['Date'].append(datetime.datetime.fromtimestamp(i))
+        reformatted_data1['Open'].append(df_pred.iloc[i,3])
+        reformatted_data1['High'].append(df_pred.iloc[i,1])
+        reformatted_data1['Low'].append(df_pred.iloc[i,2])
+        reformatted_data1['Close'].append(df_pred.iloc[i,4])
+        # reformatted_data['Volume'].append(dict['vol'])
+    print("reformatted data:", reformatted_data1)
+    pdata1 = pd.DataFrame.from_dict(reformatted_data1)
+    pdata1.set_index('Date', inplace=True)
+
+    reformatted_data = dict()
+    reformatted_data['Date'] = []
+    reformatted_data['Open'] = []
+    reformatted_data['High'] = []
+    reformatted_data['Low'] = []
+    reformatted_data['Close'] = []
+
+    # print(dat, dat.index, dat.columns)
+    # print('asas', dat.iloc[0,1])
+
+    for i in range(len(dat)):
+        reformatted_data['Date'].append(datetime.datetime.fromtimestamp(i))
+        reformatted_data['Open'].append(dat.iloc[i, 3])
+        reformatted_data['High'].append(dat.iloc[i, 1])
+        reformatted_data['Low'].append(dat.iloc[i, 2])
+        reformatted_data['Close'].append(dat.iloc[i, 4])
+        # reformatted_data['Volume'].append(dict['vol'])
+    print("reformatted data:", reformatted_data)
+    pdata = pd.DataFrame.from_dict(reformatted_data)
+    pdata.set_index('Date', inplace=True)
+
+    fplt.plot(
+        pdata,
+        type='candle',
+        style='charles',
+        title='Apple, March - 2020',
+        ylabel='Price'
+    )
+
+    fplt.plot(
+        pdata1,
+        type='candle',
+        title='Apple, March - 2020',
+        ylabel='Price'
+    )
+
+
+
+    # Graficar(DatosPredict, DatosReales)
+
+print(f'[TIEMPO TOTAL DE EJECUCION: {time.time() - tini}: ')
+
+# plt.show()
+

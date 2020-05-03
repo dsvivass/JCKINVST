@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c61cd7-3350-4667-a07b-64c11425803a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101011.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101012.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101013.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101014.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101015.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101018.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101019.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101020.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101021.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101022.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101025.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101026.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101027.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101028.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101029.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101101.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101102.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101103.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101104.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101105.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20101108.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3/DH20200108.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200421.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3/DH20200421.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200501.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL4/DH20200501.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IA/GeneradorDatos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorDatos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IA/IAJacKInvEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/IAJacKInvEST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/NASDAQ_AAPL.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,20 +23,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL4" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL5" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AMD" />
       <recent name="$PROJECT_DIR$/IA" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL4" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL5" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL" />
     </key>
   </component>
@@ -73,7 +53,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.IAJacKInvEST">
-    <configuration name="DatosHistoricos" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="BorradorArchivos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,12 +61,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IA" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DatosHistoricos.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/BorradorArchivos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,10 +166,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.IAJacKInvEST" />
+        <item itemvalue="Python.BorradorArchivos" />
         <item itemvalue="Python.GeneradorDatos" />
         <item itemvalue="Python.JacKInvEST" />
         <item itemvalue="Python.GeneradorDatos2" />
-        <item itemvalue="Python.DatosHistoricos" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +193,7 @@
       <workItem from="1588113571446" duration="22679000" />
       <workItem from="1588214227386" duration="9688000" />
       <workItem from="1588284083590" duration="19031000" />
-      <workItem from="1588376806890" duration="17481000" />
+      <workItem from="1588376806890" duration="39453000" />
     </task>
     <servers />
   </component>
@@ -245,10 +225,11 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1588014410416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1588465567445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos2.coverage" NAME="GeneradorDatos2 Coverage Results" MODIFIED="1587947417326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST.coverage" NAME="IAJacKInvEST Coverage Results" MODIFIED="1588399080906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$BorradorArchivos.coverage" NAME="BorradorArchivos Coverage Results" MODIFIED="1588544209693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST.coverage" NAME="IAJacKInvEST Coverage Results" MODIFIED="1588545538158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$DatosHistoricos.coverage" NAME="DatosHistoricos Coverage Results" MODIFIED="1584393168012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1588376294352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1588543838341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
   </component>
 </project>

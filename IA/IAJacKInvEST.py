@@ -124,10 +124,10 @@ for file in ls:
     x = x.append(df_org)
 
 df = OrganizadorDfGeneral(df)
-cor = df.corr('pearson')
-
-sns.heatmap(cor)
-plt.show()
+# cor = df.corr('pearson')
+#
+# sns.heatmap(cor)
+# plt.show()
 
 # pd.set_option('display.max_columns', None)
 # df2 = pd.DataFrame()
@@ -154,16 +154,16 @@ for file in ls:
 from matplotlib.ticker import FormatStrFormatter
 df_pred = pd.DataFrame()
 
-horas = CadenaHoras(HInicial=(8,30,0), HFinal=(15,30,0), paso_minutos=5)
+horas = CadenaHoras(HInicial=(8,30,0), HFinal=(15,0,0), paso_minutos=5)
 fig, ax = plt.subplots()
-for grado, alfa in zip([1],[0.0000001]):
+for grado, alfa in zip([1],[0.00001]):
 
     i, DatosReales, DatosPredict = 1, [], []
     for hora in horas:
         tini2 = time.time()
         y = df.iloc[:,df.columns.get_level_values(1)==hora]
         # print(f'[ENCONTRANDO MEJOR GRADO Y ALFA: {i} de {len(horas)}')
-        # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,20)),
+        # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,5)),
         #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=4, x=x, y=y)
 
         input = [('escala', StandardScaler()), ('polinomio',PolynomialFeatures(degree=grado)), ('regresion', Ridge(alpha=alfa))]
@@ -181,7 +181,6 @@ for grado, alfa in zip([1],[0.0000001]):
     df_pred = df_pred[['Hora', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre', 'Volumen']]
 
     # df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
-    dat = pd_graf(horas)
     # dat.set_index(dat['Hora'], inplace=True)
 
     reformatted_data1 = dict()
@@ -214,41 +213,43 @@ for grado, alfa in zip([1],[0.0000001]):
     pdata1 = pd.DataFrame.from_dict(reformatted_data1)
     pdata1.set_index('Date', inplace=True)
 
-    reformatted_data = dict()
-    reformatted_data['Date'] = []
-    reformatted_data['Open'] = []
-    reformatted_data['High'] = []
-    reformatted_data['Low'] = []
-    reformatted_data['Close'] = []
-    reformatted_data1['Volume'] = []
-
-    # print(dat, dat.index, dat.columns)
-    # print('asas', dat.iloc[0,1])
-
-    for i in range(len(dat)):
-        reformatted_data['Date'].append(datetime.datetime.strptime(dat.iloc[i,0], '%H:%M:%S'))
-        reformatted_data['Open'].append(dat.iloc[i, 3])
-        reformatted_data['High'].append(dat.iloc[i, 1])
-        reformatted_data['Low'].append(dat.iloc[i, 2])
-        reformatted_data['Close'].append(dat.iloc[i, 4])
-        reformatted_data1['Volume'].append(dat.iloc[i, 5])
-        # reformatted_data['Volume'].append(dict['vol'])
-    # print("reformatted data:", reformatted_data)
-    pdata = pd.DataFrame.from_dict(reformatted_data)
-    pdata.set_index('Date', inplace=True)
-
-    fplt.plot(
-        pdata,
-        type='candle',
-        style='charles',
-        title='Apple, March - 2020',
-        ylabel='Price'
-    )
+    # dat = pd_graf(horas)
+    # reformatted_data = dict()
+    # reformatted_data['Date'] = []
+    # reformatted_data['Open'] = []
+    # reformatted_data['High'] = []
+    # reformatted_data['Low'] = []
+    # reformatted_data['Close'] = []
+    # reformatted_data1['Volume'] = []
+    #
+    # # print(dat, dat.index, dat.columns)
+    # # print('asas', dat.iloc[0,1])
+    #
+    # for i in range(len(dat)):
+    #     reformatted_data['Date'].append(datetime.datetime.strptime(dat.iloc[i,0], '%H:%M:%S'))
+    #     reformatted_data['Open'].append(dat.iloc[i, 3])
+    #     reformatted_data['High'].append(dat.iloc[i, 1])
+    #     reformatted_data['Low'].append(dat.iloc[i, 2])
+    #     reformatted_data['Close'].append(dat.iloc[i, 4])
+    #     reformatted_data1['Volume'].append(dat.iloc[i, 5])
+    #     # reformatted_data['Volume'].append(dict['vol'])
+    # # print("reformatted data:", reformatted_data)
+    # pdata = pd.DataFrame.from_dict(reformatted_data)
+    # pdata.set_index('Date', inplace=True)
+    #
+    # fplt.plot(
+    #     pdata,
+    #     type='candle',
+    #     style='charles',
+    #     title='REAL',
+    #     ylabel='Price'
+    # )
 
     fplt.plot(
         pdata1,
         type='candle',
-        title='Apple, March - 2020',
+        style='charles',
+        title='PRED',
         ylabel='Price'
     )
 

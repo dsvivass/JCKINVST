@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.preprocessing import PolynomialFeatures, StandardScaler
-# from sklearn.metrics import r2_score
+from sklearn import metrics
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.pipeline import Pipeline
 import seaborn as sns
@@ -12,6 +12,8 @@ import math
 import time
 import datetime
 import mplfinance as fplt
+from sklearn.neighbors import KNeighborsClassifier
+
 
 from warnings import simplefilter
 # ignore all future warnings
@@ -28,8 +30,14 @@ def OrganizadorDfDia(archivo, horas=False):
     df_dia['Hora'] = FechaDividida[1]
     # df_dia['Ponderado'] = (df_dia['P_alto']+df_dia['P_bajo']+df_dia['P_apert']+df_dia['P_cierre'])/4 # ECUACION CAMBIANTE
     # df_dia['Ponderado'] = df_dia['P_cierre']
-    if horas is not False: df_dia = df_dia[df_dia['Hora'].isin(horas)]
+    # df_dia.loc[df_dia['P_cierre'] >= df_dia['P_apert'], 'Condicion'] = 'Sube'
+    # df_dia.loc[df_dia['P_cierre'] < df_dia['P_apert'], 'Condicion'] = 'Baja'
+    if horas is not False:
+        df_dia = df_dia[df_dia['Hora'].isin(horas)]
     df_pivot = df_dia.pivot(index='Fecha', columns='Hora', values=['P_alto', 'P_bajo', 'P_apert', 'P_cierre', 'Volumen'])
+    if horas is False:
+        df_pivot.loc[df_pivot.iloc[[0]][('P_cierre', '08:30:00')] >= df_pivot.iloc[[0]][('P_apert', '08:30:00')], 'Condicion'] = 'Sube'
+        df_pivot.loc[df_pivot.iloc[[0]][('P_cierre', '08:30:00')] < df_pivot.iloc[[0]][('P_apert', '08:30:00')], 'Condicion'] = 'Baja'
     return df_pivot
 
 
@@ -42,29 +50,30 @@ def OrganizadorDfGeneral(dataFrame):
     return dataFrame.dropna(axis=1, how='any')
 
 
-def MejorAjuste(gradoPol, alpha, cv, x, y):
+def MejorAjuste(vecino, cv, x, y):
     '''Ingresar los valores en lista, menos cv (int),\n Retorna grado Polinomio y coeficiente alfa que mejor se ajusta'''
 
     print('[ESTADO MEJOR AJUSTE: ANALIZANDO...]')
-    input = [('polinomio',PolynomialFeatures()), ('regresion', Ridge(solver='lsqr'))]
-    parametros = [{'polinomio__degree':gradoPol, 'regresion__alpha':alpha}] # 0, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000
+    input = [('escala', StandardScaler()), ('vecinos', KNeighborsClassifier())]
+    parametros = [{'vecinos__n_neighbors':vecino}] # 0, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000
     pipe = Pipeline(steps=input)
-    grid = GridSearchCV(pipe, parametros, cv=cv, n_jobs=-1, return_train_score=True)
+    grid = GridSearchCV(pipe, parametros, cv=cv, n_jobs=-1, return_train_score=True, scoring='accuracy')
     grid.fit(x,y)
     scores = grid.cv_results_
+    print(scores)
     r2 = None
-    for grado,param,mean_train,mean_test in zip(scores['param_polinomio__degree'], scores['param_regresion__alpha'],
-                                                scores['mean_train_score'], scores['mean_test_score']): # , norm, scores['param_regresion__normalize'],
+    for n_vecinos, mean_train, mean_test in zip(scores['param_vecinos__n_neighbors'],
+                                                scores['mean_train_score'], scores[
+                                                    'mean_test_score']):  # , norm, scores['param_regresion__normalize'],
         if r2 is None or mean_test >= r2:
             r2 = mean_test
-            gradoR = grado
-            paramR = param
+            n_vecinosR = n_vecinos
             mean_trainR = mean_train
             mean_testR = mean_test
     # print(grid.best_estimator_)
-    print(f'[ESTADO MEJOR AJUSTE: Grado polinomio: {gradoR}, alfa: {paramR}, media r2 entrenamiento: {mean_trainR}, '
-          f'media r2 pruebas: {mean_testR}]') # , normalizado, {norm}
-    return gradoR, paramR
+    print(f'[ESTADO MEJOR AJUSTE: Numero de vecinos: {n_vecinosR}, media r2 entrenamiento: {mean_trainR}, '
+          f'media r2 pruebas: {mean_testR}]')  # , normalizado, {norm}
+    return n_vecinosR
 
 
 def CadenaHoras(year=1995, month=3, day=28, HInicial=(8,30,0), HFinal=(8,30,0), paso_minutos = 5):
@@ -116,7 +125,7 @@ ls = sorted(os.listdir())
 print(ls)
 
 l_horas = CadenaHoras(HInicial=(4,0,0), HFinal=(8,25,0), paso_minutos=5)
-contT, contF, acum = 0, 0, []
+contT, contF, acum= 0, 0, []
 for i,archivo_test in enumerate(ls):
 
     print(f'[ANALIZANDO ARCHIVO {i} de {len(ls)}]')
@@ -165,17 +174,16 @@ for i,archivo_test in enumerate(ls):
 
     horas = CadenaHoras(HInicial=(8,30,0), HFinal=(8,30,0), paso_minutos=5)
     # fig, ax = plt.subplots()
-    for grado, alfa in zip([1],[0.00001]):
+    for vecino in [61]:
 
         i, DatosReales, DatosPredict = 1, [], []
         for hora in horas:
             tini2 = time.time()
-            y = df.iloc[:,df.columns.get_level_values(1)==hora]
+            y = df[['Condicion']].values.ravel()
             # print(f'[ENCONTRANDO MEJOR GRADO Y ALFA: {i} de {len(horas)}')
-            # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,10)),
-            #                                      alpha=[0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=20, x=x, y=y)
+            # MejorVecino = MejorAjuste(vecino=list(range(1,180)), cv=20, x=x, y=y)
 
-            input = [('escala', StandardScaler()), ('polinomio',PolynomialFeatures(degree=grado)), ('regresion', Ridge(alpha=alfa))]
+            input = [('escala', StandardScaler()), ('vecinos', KNeighborsClassifier(n_neighbors=vecino))]
             pipe = Pipeline(steps=input)
             pipe.fit(x, y)
             Predict = pipe.predict(df_org[x.columns])
@@ -184,105 +192,20 @@ for i,archivo_test in enumerate(ls):
             df_pred = df_pred.append(pd.DataFrame(Predict), ignore_index=True)
             i=i+1
 
+        df_actual = OrganizadorDfDia(archivo_test)
+        # print(df_actual['Condicion'])
+        # with pd.option_context('display.max_rows', None, 'display.max_columns',
+        #                        None):  # more options can be specified also
+        #     print(df_actual)
+        print(df_pred[0].values == df_actual['Condicion'].values )
 
-        df_pred['Hora'] = horas
-        df_pred.rename(columns={0: 'P_alto', 1: 'P_bajo', 2: 'P_apert', 3: 'P_cierre', 4: 'Volumen'}, inplace=True)
-        df_pred = df_pred[['Hora', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre', 'Volumen']]
-        # print('df_pred', df_pred)
-        # print(df_pred.columns, df_pred.iloc[0, 3], df_pred.iloc[0, 1], df_pred.iloc[0, 2], df_pred.iloc[0, 4])
-        # df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
-        # dat.set_index(dat['Hora'], inplace=True)
-
-        reformatted_data1 = dict()
-        reformatted_data1['Date'] = []
-        reformatted_data1['Open'] = []
-        reformatted_data1['High'] = []
-        reformatted_data1['Low'] = []
-        reformatted_data1['Close'] = []
-        reformatted_data1['Volume'] = []
-
-        # print(dat, dat.index, dat.columns)
-        # print('asas', dat.iloc[0,1])
-
-        # datetime_str = '09/19/18 13:55:26'
-        #
-        # datetime_object = datetime.strptime(datetime_str, '%m/%d/%y %H:%M:%S')
-        # ['Hora', 'P_alto', 'P_bajo', 'P_apert', 'P_cierre', 'Volumen']]
-
-        for i in range(len(df_pred)):
-            # reformatted_data1['Date'].append(datetime.datetime.fromtimestamp(i))
-            reformatted_data1['Date'].append(datetime.datetime.strptime(df_pred.iloc[i, 0], '%H:%M:%S'))
-            reformatted_data1['Open'].append(df_pred.iloc[i, 3])
-            reformatted_data1['High'].append(df_pred.iloc[i, 1])
-            reformatted_data1['Low'].append(df_pred.iloc[i, 2])
-            reformatted_data1['Close'].append(df_pred.iloc[i, 4])
-            reformatted_data1['Volume'].append(df_pred.iloc[i, 5])
-            # reformatted_data['Volume'].append(dict['vol'])
-        # print("reformatted data:", reformatted_data1)
-        pdata1 = pd.DataFrame.from_dict(reformatted_data1)
-        pdata1.set_index('Date', inplace=True)
-        pdata1.loc[pdata1['Close'] >= pdata1['Open'], 'CondicionPred'] = 'Sube'
-        pdata1.loc[pdata1['Close'] < pdata1['Open'], 'CondicionPred'] = 'Baja'
-        # print('Predicho, pdata1: ', pdata1)
-
-        dat = pd_graf(horas)
-        # print('real: ', dat)
-        reformatted_data = dict()
-        reformatted_data['Date'] = []
-        reformatted_data['Open'] = []
-        reformatted_data['High'] = []
-        reformatted_data['Low'] = []
-        reformatted_data['Close'] = []
-        reformatted_data1['Volume'] = []
-
-        # print(dat, dat.index, dat.columns)
-        # print('asas', dat.iloc[0,1])
-
-        for i in range(len(dat)):
-            reformatted_data['Date'].append(datetime.datetime.strptime(dat.iloc[i,0], '%H:%M:%S'))
-            reformatted_data['Open'].append(dat.iloc[i, 3])
-            reformatted_data['High'].append(dat.iloc[i, 1])
-            reformatted_data['Low'].append(dat.iloc[i, 2])
-            reformatted_data['Close'].append(dat.iloc[i, 4])
-            reformatted_data1['Volume'].append(dat.iloc[i, 5])
-            # reformatted_data['Volume'].append(dict['vol'])
-        # print("reformatted data:", reformatted_data)
-        pdata = pd.DataFrame.from_dict(reformatted_data)
-        pdata.set_index('Date', inplace=True)
-
-        pdata.loc[pdata['Close'] >= pdata['Open'], 'CondicionReal'] = 'Sube'
-        pdata.loc[pdata['Close'] < pdata['Open'], 'CondicionReal'] = 'Baja'
-        # print('Real, pdata1: ', pdata)
-
-
-
-        # fplt.plot(
-        #     pdata,
-        #     type='candle',
-        #     style='charles',
-        #     title='REAL',
-        #     ylabel='Price'
-        # )
-        #
-        # fplt.plot(
-        #     pdata1,
-        #     type='candle',
-        #     style='charles',
-        #     title='PRED',
-        #     ylabel='Price'
-        # )
-
-        cond = pd.DataFrame()
-        cond['Comparacion'] = pdata['CondicionReal'] == pdata1['CondicionPred']
-        Contador = cond['Comparacion'].value_counts()
-        print(Contador.index[0], Contador.iloc[0], archivo_test)
-
-        if Contador.index[0] == True:
+        if df_pred[0].values == df_actual['Condicion'].values:
             acum.append(1)
             contT += 1
         else:
-            acum.append(-1)
             contF += 1
+            acum.append(-1)
+
 
 ac = np.cumsum(acum)
 print(acum, ac)

@@ -322,37 +322,39 @@ class TestApp(EWrapper, EClient):
 #     ColocarOrdenAvanzada.main()
 
 def main():
-    try:
-        app = TestApp()
-        app.connect('127.0.0.1', 7497, 0)
-        contract = Contract()
-        # contract.symbol = "AMD"
-        # contract.secType = "STK"
-        # contract.currency = "USD"
-        # contract.exchange = "SMART"
 
-        # contract.symbol = "EUR"
-        # contract.secType = "CASH"
-        # contract.exchange = 'IDEALPRO'
-        # contract.currency = "USD"
+    app = TestApp()
+    app.connect('127.0.0.1', 7497, 0)
+    contract = Contract()
+    # contract.symbol = "AMD"
+    # contract.secType = "STK"
+    # contract.currency = "USD"
+    # contract.exchange = "SMART"
 
-        contract.symbol = "AMD"
-        contract.secType = "OPT"
-        contract.lastTradeDateOrContractMonth = '20200501'
-        contract.exchange = 'SMART'
-        contract.currency = "USD"
-        contract.multiplier = '100'
-        contract.strike = '57'
-        contract.right = 'C'
+    # contract.symbol = "EUR"
+    # contract.secType = "CASH"
+    # contract.exchange = 'IDEALPRO'
+    # contract.currency = "USD"
 
-        app.reqHistoricalData(1, contract, '', '1 D', '1 min', 'TRADES', 0, 1, True, [])
-        # app.reqContractDetails(7, contract.OptionForQuery())
-        app.reqSecDefOptParams(2, "AMD", "", "STK", 8314)
-        app.reqMktData(57, contract, "233", False, False, [])
-        # Timer(20, app.stop).start()
-        app.run()
-    except ConnectionResetError:
-            main()
+    contract.symbol = "AMD"
+    contract.secType = "OPT"
+    contract.lastTradeDateOrContractMonth = '20200501'
+    contract.exchange = 'SMART'
+    contract.currency = "USD"
+    contract.multiplier = '100'
+    contract.strike = '57'
+    contract.right = 'C'
+
+    app.reqHistoricalData(1, contract, '', '1 D', '1 min', 'TRADES', 0, 1, True, [])
+    # app.reqContractDetails(7, contract.OptionForQuery())
+    # app.reqSecDefOptParams(2, "AMD", "", "STK", 8314)
+    # app.reqMktData(57, contract, "233", False, False, [])
+    # Timer(20, app.stop).start()
+    app.run()
+
+    if EstadoConexion is False: # Mira si entra al atributo error
+        main()
+
 
     # if EstadoConexion is False: # Mira si entra al atributo error
     #     main()

@@ -71,8 +71,8 @@ def main():
     # contract.exchange = 'IDEALPRO'
     # contract.currency = "USD"
 
-    app.reqHistoricalData(1, contract, '', '25000 S', '5 mins', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT
-    app.reqHistoricalData(1, contract, '', '25000 S', '5 mins', 'TRADES', 0, 1, True, [])
+    app.reqHistoricalData(1, contract, '', '2 D', '5 mins', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT
+    app.reqHistoricalData(1, contract, '', '2 D', '5 mins', 'TRADES', 0, 1, True, [])
     app.run()
 
     if EstadoConexion is False: # Mira si entra al atributo error

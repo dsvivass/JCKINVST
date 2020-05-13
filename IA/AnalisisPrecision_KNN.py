@@ -122,27 +122,42 @@ def pd_graf(horas = False):
 DirAct = os.getcwd()
 os.chdir('DatosHistoricos/AAPL')
 ls = sorted(os.listdir())
-print(ls)
+print(ls[:-256])
+print(ls[-256:])
 
-l_horas = CadenaHoras(HInicial=(4,0,0), HFinal=(8,25,0), paso_minutos=5)
-contT, contF, acum= 0, 0, []
-for i,archivo_test in enumerate(ls):
+l_horas = CadenaHoras(HInicial=(8,20,0), HFinal=(8,20,0), paso_minutos=5)
+contT, contF, contSube, acum= 0, 0, 0, []
+
+df, x = pd.DataFrame(), pd.DataFrame() # Creacion dataframe que almacena todos los datos
+for file in ls[:-256]:
+    # if file != archivo_test:
+        # print('El archivo de entrenamiento es: ', file)
+    df_org = OrganizadorDfDia(file)
+    df = df.append(df_org)
+    df_org = OrganizadorDfDia(file, l_horas)
+    x = x.append(df_org)
+
+df = OrganizadorDfGeneral(df)
+# df.to_excel('df.xlsx')
+# x.to_excel('x.xlsx')
+
+for i,archivo_test in enumerate(ls[-256:]):
 
     print('ARCHIVO TEST: ', archivo_test)
 
     print(f'[ANALIZANDO ARCHIVO {i} de {len(ls)}]')
-    df, x = pd.DataFrame(), pd.DataFrame() # Creacion dataframe que almacena todos los datos
-    for file in ls:
-        if file != archivo_test:
-            # print('El archivo de entrenamiento es: ', file)
-            df_org = OrganizadorDfDia(file)
-            df = df.append(df_org)
-            df_org = OrganizadorDfDia(file, l_horas)
-            x = x.append(df_org)
+    # df, x = pd.DataFrame(), pd.DataFrame() # Creacion dataframe que almacena todos los datos
+    # for file in ls:
+    #     if file != archivo_test:
+    #         # print('El archivo de entrenamiento es: ', file)
+    #         df_org = OrganizadorDfDia(file)
+    #         df = df.append(df_org)
+    #         df_org = OrganizadorDfDia(file, l_horas)
+    #         x = x.append(df_org)
         # else:
         #     print('El archivo de prueba es: ', archivo_test)
 
-    df = OrganizadorDfGeneral(df)
+    # df = OrganizadorDfGeneral(df)
     # cor = df.corr('pearson')
     #
     # sns.heatmap(cor)
@@ -172,13 +187,14 @@ for i,archivo_test in enumerate(ls):
     # df_org = OrganizadorDfGeneral(df_org)
 
     from matplotlib.ticker import FormatStrFormatter
-    df_pred = pd.DataFrame()
+    # df_pred = pd.DataFrame()
 
     horas = CadenaHoras(HInicial=(8,30,0), HFinal=(8,30,0), paso_minutos=5)
     # fig, ax = plt.subplots()
-    for vecino in [640]:
+    for vecino in [100]:
 
         i, DatosReales, DatosPredict = 1, [], []
+        df_pred = pd.DataFrame()
         for hora in horas:
             tini2 = time.time()
             y = df[['Condicion']].values.ravel()
@@ -189,6 +205,9 @@ for i,archivo_test in enumerate(ls):
             pipe = Pipeline(steps=input)
             pipe.fit(x, y)
             Predict = pipe.predict(df_org[x.columns])
+            # print('x', x)
+            # print('y', y)
+            # print('xpred', df_org[x.columns])
 
             DatosPredict.append(Predict[0][0])
             df_pred = df_pred.append(pd.DataFrame(Predict), ignore_index=True)
@@ -199,18 +218,22 @@ for i,archivo_test in enumerate(ls):
         # with pd.option_context('display.max_rows', None, 'display.max_columns',
         #                        None):  # more options can be specified also
         #     print(df_actual)
-        print(df_pred[0].values == df_actual['Condicion'].values)
-        print('[PREDICCION: ]', df_pred[0][0])
+        # print(df_pred[0].values == df_actual['Condicion'].values)
+        # print(df_pred[0].values, df_actual['Condicion'].values)
+        # print('[PREDICCION: ]', df_pred[0][0])
         # print(df_actual['Condicion'])
 
         if df_pred[0].values == df_actual['Condicion'].values:
-            acum.append(20)
+            acum.append(1)
             contT += 1
         else:
             contF += 1
-            acum.append(-20)
+            acum.append(-1)
 
+        if df_pred[0].values == 'Sube':
+            contSube += 1
 
+print('SUMAS: ',contSube, contT+contF)
 ac = np.cumsum(acum)
 # print(acum, ac)
 print(f'Acertados: {contT}, Errados: {contF}')

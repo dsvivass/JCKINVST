@@ -45,10 +45,10 @@ def MejorAjuste(gradoPol, alpha, cv, x, y):
     '''Ingresar los valores en lista, menos cv (int),\n Retorna grado Polinomio y coeficiente alfa que mejor se ajusta'''
 
     print('[ESTADO MEJOR AJUSTE: ANALIZANDO...]')
-    input = [('polinomio',PolynomialFeatures()), ('regresion', Ridge(solver='lsqr'))]
+    input = [('escala', StandardScaler()), ('polinomio',PolynomialFeatures()), ('regresion', Ridge(solver='lsqr'))]
     parametros = [{'polinomio__degree':gradoPol, 'regresion__alpha':alpha}] # 0, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000
     pipe = Pipeline(steps=input)
-    grid = GridSearchCV(pipe, parametros, cv=cv, n_jobs=-1, return_train_score=True)
+    grid = GridSearchCV(pipe, parametros, cv=cv, n_jobs=-1, return_train_score=True, verbose=10)
     grid.fit(x,y)
     scores = grid.cv_results_
     r2 = None
@@ -158,7 +158,7 @@ df_pred = pd.DataFrame()
 
 horas = CadenaHoras(HInicial=(8,30,0), HFinal=(15,0,0), paso_minutos=5)
 fig, ax = plt.subplots()
-for grado, alfa in zip([1],[0.00001]):
+for grado, alfa in zip([1],[1000]):
 
     i, DatosReales, DatosPredict = 1, [], []
     for hora in horas:
@@ -167,8 +167,8 @@ for grado, alfa in zip([1],[0.00001]):
         # print(y)
         # y.to_excel('y.xlsx')
         # print(f'[ENCONTRANDO MEJOR GRADO Y ALFA: {i} de {len(horas)}')
-        # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,5)),
-        #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=4, x=x, y=y)
+        # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,2)),
+        #                                      alpha=[0.00000001, 0.0000001, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=20, x=x, y=y)
 
         input = [('escala', StandardScaler()), ('polinomio',PolynomialFeatures(degree=grado)), ('regresion', Ridge(alpha=alfa))]
         pipe = Pipeline(steps=input)

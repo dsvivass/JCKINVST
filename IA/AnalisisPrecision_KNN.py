@@ -57,7 +57,7 @@ def MejorAjuste(vecino, cv, x, y):
     input = [('escala', StandardScaler()), ('vecinos', KNeighborsClassifier())]
     parametros = [{'vecinos__n_neighbors':vecino}] # 0, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000
     pipe = Pipeline(steps=input)
-    grid = GridSearchCV(pipe, parametros, cv=cv, n_jobs=-1, return_train_score=True, scoring='accuracy')
+    grid = GridSearchCV(pipe, parametros, cv=cv, n_jobs=-1, return_train_score=True, scoring='accuracy', verbose=10)
     grid.fit(x,y)
     scores = grid.cv_results_
     print(scores)
@@ -120,13 +120,15 @@ def pd_graf(horas = False):
 
 # LINEA PRINCIPAL
 DirAct = os.getcwd()
-os.chdir('DatosHistoricos/AAPL6')
+os.chdir('DatosHistoricos/AAPL')
 ls = sorted(os.listdir())
 print(ls)
 
 l_horas = CadenaHoras(HInicial=(4,0,0), HFinal=(8,25,0), paso_minutos=5)
 contT, contF, acum= 0, 0, []
 for i,archivo_test in enumerate(ls):
+
+    print('ARCHIVO TEST: ', archivo_test)
 
     print(f'[ANALIZANDO ARCHIVO {i} de {len(ls)}]')
     df, x = pd.DataFrame(), pd.DataFrame() # Creacion dataframe que almacena todos los datos
@@ -174,14 +176,14 @@ for i,archivo_test in enumerate(ls):
 
     horas = CadenaHoras(HInicial=(8,30,0), HFinal=(8,30,0), paso_minutos=5)
     # fig, ax = plt.subplots()
-    for vecino in [61]:
+    for vecino in [640]:
 
         i, DatosReales, DatosPredict = 1, [], []
         for hora in horas:
             tini2 = time.time()
             y = df[['Condicion']].values.ravel()
             # print(f'[ENCONTRANDO MEJOR GRADO Y ALFA: {i} de {len(horas)}')
-            # MejorVecino = MejorAjuste(vecino=list(range(1,180)), cv=20, x=x, y=y)
+            # MejorVecino = MejorAjuste(vecino=list(range(1,1500)), cv=20, x=x, y=y)
 
             input = [('escala', StandardScaler()), ('vecinos', KNeighborsClassifier(n_neighbors=vecino))]
             pipe = Pipeline(steps=input)
@@ -197,18 +199,20 @@ for i,archivo_test in enumerate(ls):
         # with pd.option_context('display.max_rows', None, 'display.max_columns',
         #                        None):  # more options can be specified also
         #     print(df_actual)
-        print(df_pred[0].values == df_actual['Condicion'].values )
+        print(df_pred[0].values == df_actual['Condicion'].values)
+        print('[PREDICCION: ]', df_pred[0][0])
+        # print(df_actual['Condicion'])
 
         if df_pred[0].values == df_actual['Condicion'].values:
-            acum.append(1)
+            acum.append(20)
             contT += 1
         else:
             contF += 1
-            acum.append(-1)
+            acum.append(-20)
 
 
 ac = np.cumsum(acum)
-print(acum, ac)
+# print(acum, ac)
 print(f'Acertados: {contT}, Errados: {contF}')
 print(f'[ACERTO UN {contT/(contT+contF)}]')
 print(f'[TIEMPO TOTAL DE EJECUCION: {time.time() - tini}: ')

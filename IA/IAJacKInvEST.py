@@ -36,7 +36,6 @@ def OrganizadorDfDia(archivo, horas=False):
 def OrganizadorDfGeneral(dataFrame):
     '''Organiza por horas, limpia el DataFrame de las filas y columnas con valores NaN'''
 
-    print('[ESTADO DATAFRAME: CREANDO...]')
     dataFrame.sort_index(axis=1, inplace=True)  # Organiza Las columnas por orden de horas
     print('[ESTADO DATAFRAME: CREADO!]')
     return dataFrame.dropna(axis=1, how='any')
@@ -112,18 +111,21 @@ def pd_graf(horas = False):
 # LINEA PRINCIPAL
 df, x = pd.DataFrame(), pd.DataFrame() # Creacion dataframe que almacena todos los datos
 DirAct = os.getcwd()
-os.chdir('DatosHistoricos/AAPL6')
+os.chdir('DatosHistoricos/AAPL')
 ls = sorted(os.listdir())
 
-l_horas = CadenaHoras(HInicial=(4,0,0), HFinal=(8,25,0), paso_minutos=5)
+l_horas = CadenaHoras(HInicial=(4,0,0), HFinal=(8,20,0), paso_minutos=5)
 
+print('[ESTADO DATAFRAME: CREANDO...]')
 for file in ls:
     df_org = OrganizadorDfDia(file)
     df = df.append(df_org)
+    # print(file,df_org)
     df_org = OrganizadorDfDia(file, l_horas)
     x = x.append(df_org)
-
+# x.to_excel('x.xlsx')
 df = OrganizadorDfGeneral(df)
+# df.to_excel('xdf.xlsx')
 # cor = df.corr('pearson')
 #
 # sns.heatmap(cor)
@@ -162,6 +164,8 @@ for grado, alfa in zip([1],[0.00001]):
     for hora in horas:
         tini2 = time.time()
         y = df.iloc[:,df.columns.get_level_values(1)==hora]
+        # print(y)
+        # y.to_excel('y.xlsx')
         # print(f'[ENCONTRANDO MEJOR GRADO Y ALFA: {i} de {len(horas)}')
         # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,5)),
         #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=4, x=x, y=y)
@@ -237,13 +241,13 @@ for grado, alfa in zip([1],[0.00001]):
     pdata = pd.DataFrame.from_dict(reformatted_data)
     pdata.set_index('Date', inplace=True)
 
-    fplt.plot(
-        pdata,
-        type='candle',
-        style='charles',
-        title='REAL',
-        ylabel='Price'
-    )
+    # fplt.plot(
+    #     pdata,
+    #     type='candle',
+    #     style='charles',
+    #     title='REAL',
+    #     ylabel='Price'
+    # )
 
     fplt.plot(
         pdata1,

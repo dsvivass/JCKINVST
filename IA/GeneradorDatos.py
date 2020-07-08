@@ -1,7 +1,26 @@
+#!/usr/bin/env python3
+
+# import os
+# import subprocess
+# import sys
+#
+# print(os.environ) # Muestra todas las variables de entorno
+# mi_env = os.environ.copy()
+#
+# mi_env['PATH'] = os.pathsep.join(['/Users/dvs/Documents/INGENIERIA_CIVIL/PYTHON/IB/twsapi_macunix/IBJts/source/pythonclient/ibapi', mi_env['PATH']])
+# print(mi_env['PATH'])
+# # sys.exit(mi_env['PATH'])
+# # subprocess.run(args=['export', 'PATH={}'.format(mi_env['PATH'])]) # , env=mi_env
+# # subprocess.run(args=['echo', 'hola'])
+
 from ibapi.client import EClient
 from ibapi.wrapper import EWrapper
 from ibapi.contract import Contract
+from threading import Timer
+import sys
 import os
+
+# raise ValueError('Error Intencional')
 
 ult_bar_date = None
 nombre_archivo = None
@@ -11,6 +30,7 @@ i = 0
 # CREACION DE DIRECTORIO PARA ESCRITURA DE ARCHIVOS .TXT
 DirActual = os.getcwd() # DirActual
 os.chdir('DatosHistoricos') # Cambio de directorio
+# os.chdir('IA/DatosHistoricos') # Cambio de directorio
 carpeta = 'AAPL'
 os.chdir(carpeta) # Cambio subdirectorio
 EstadoConexion = False
@@ -73,8 +93,9 @@ def main():
 
     # '20130701 23:59:59 GMT'
 
-    app.reqHistoricalData(1, contract, '20110510 23:59:59 GMT', '1 Y', '5 mins', 'MIDPOINT', 0, 1, False, [])  # MIDPOINT
-    app.reqHistoricalData(1, contract, '20110510 23:59:59 GMT', '1 Y', '5 mins', 'TRADES', 0, 1, False, [])
+    app.reqHistoricalData(1, contract, '', '2 D', '5 mins', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT
+    app.reqHistoricalData(1, contract, '', '2 D', '5 mins', 'TRADES', 0, 1, True, [])
+    # Timer(5, sys.exit(101)).start()
     app.run()
 
     if EstadoConexion is False: # Mira si entra al atributo error

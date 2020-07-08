@@ -5,13 +5,13 @@ import os
 
 DirActual = os.getcwd() # DirActual
 os.chdir('DatosHistoricos') # Cambio de directorio
-carpeta = 'AAPLYAHOO'
+carpeta = 'AAPL3'
 os.chdir(carpeta)
 
 def datosYahoo(simbolo):
     tickerdata = yf.Ticker(simbolo)
     tickerinfo = tickerdata.info
-    tickerDF = tickerdata.history(interval='5m', prepost=True, start="2017-01-01", end="2017-02-01")
+    tickerDF = tickerdata.history(interval='5m', prepost=True)
     print(tickerDF)
     # tickerDF.to_csv('csvtest.csv')
 

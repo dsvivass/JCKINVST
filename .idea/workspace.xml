@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7c61cd7-3350-4667-a07b-64c11425803a" name="Default Changelist" comment="">
+    <list default="true" id="a7c61cd7-3350-4667-a07b-64c11425803a" name="Default Changelist" comment="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200511K.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/GeneradorDatos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorDatos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200708.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IA/fig835.png" beforeDir="false" afterPath="$PROJECT_DIR$/IA/fig835.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/yahoo.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/yahoo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GeneradorDatos">
+  <component name="RunManager" selected="Python.IAJacKInvEST_Linea">
     <configuration name="AnalisisPrecision_RegresionLogistica" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -214,7 +212,24 @@
       <workItem from="1593364165664" duration="19154000" />
       <workItem from="1593805185434" duration="21000" />
       <workItem from="1594041586560" duration="2048000" />
+      <workItem from="1594228129245" duration="2419000" />
+      <workItem from="1594645890726" duration="2131000" />
     </task>
+    <task id="LOCAL-00001" summary="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
+      <created>1594228209447</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594228209447</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
+      <created>1594228303338</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594228303338</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +259,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Varias pruebas y programa establa, con IA de regresion y de Clasificacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Varias pruebas y programa establa, con IA de regresion y de Clasificacion" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_SVM.coverage" NAME="AnalisisPrecision_SVM Coverage Results" MODIFIED="1591412327796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos2.coverage" NAME="GeneradorDatos2 Coverage Results" MODIFIED="1587947417326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
@@ -252,7 +271,7 @@
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_RegresionLogistica.coverage" NAME="AnalisisPrecision_RegresionLogistica Coverage Results" MODIFIED="1591042824110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$yahoo.coverage" NAME="yahoo Coverage Results" MODIFIED="1590413353326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_KNN.coverage" NAME="AnalisisPrecision_KNN Coverage Results" MODIFIED="1589400547375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1594214362986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1594905472251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos.coverage" NAME="AnalisisPrecision_ArbolDatos Coverage Results" MODIFIED="1590517749345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1588950810180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1589211715832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
@@ -261,6 +280,6 @@
     <SUITE FILE_PATH="coverage/pythonclient$BorradorArchivos.coverage" NAME="BorradorArchivos Coverage Results" MODIFIED="1589477094556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$DatosHistoricos.coverage" NAME="DatosHistoricos Coverage Results" MODIFIED="1584393168012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos1dato.coverage" NAME="AnalisisPrecision_ArbolDatos1dato Coverage Results" MODIFIED="1590554905901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea.coverage" NAME="IAJacKInvEST_Linea Coverage Results" MODIFIED="1594214402360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea.coverage" NAME="IAJacKInvEST_Linea Coverage Results" MODIFIED="1594906824798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
   </component>
 </project>

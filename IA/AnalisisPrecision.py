@@ -111,7 +111,7 @@ def pd_graf(horas = False):
 
 # LINEA PRINCIPAL
 DirAct = os.getcwd()
-os.chdir('DatosHistoricos/AAPL6')
+os.chdir('DatosHistoricos/AAPL_3_MINUTOS')
 ls = sorted(os.listdir())
 print(ls)
 

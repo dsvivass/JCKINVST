@@ -19,6 +19,7 @@ from ibapi.contract import Contract
 from threading import Timer
 import sys
 import os
+import time
 
 # raise ValueError('Error Intencional')
 
@@ -98,8 +99,8 @@ def main():
     # Timer(5, sys.exit(101)).start()
     app.run()
 
-    if EstadoConexion is False: # Mira si entra al atributo error
-        main()
+    # if EstadoConexion is False: # Mira si entra al atributo error
+    #     main()
 
 if __name__ == '__main__':
     main()

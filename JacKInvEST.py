@@ -56,8 +56,8 @@ class TestApp(EWrapper, EClient):
     def historicalData(self, reqId, bar):
         global Data
         global compra
-        # print('contractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
-        #       bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
+        print('contractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
+               bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
         Dat = [reqId, bar.date, bar.high, bar.low, bar.open, bar.close] #Lista de datos del dia
         self.DataFrameHistoric(Dat) # Guarda los datos en un Dataframe y en un .txt
 
@@ -65,8 +65,8 @@ class TestApp(EWrapper, EClient):
     def historicalDataUpdate(self, reqId, bar):
         global Data, ult_bar_date, ult_Dat, checker, DataOrderStatus, PrecioMkt
 
-        # print('AcontractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
-        #       bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
+        print('AcontractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
+              bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
         if bar.date != ult_bar_date and ult_bar_date is not None:
             self.DataFrameHistoricUpdate(ult_Dat) # Concatena los datos en el Dataframe creado previamente y en el .txt
             if Data.iloc[-1]['Fecha: '] == Data.iloc[-2]['Fecha: ']:
@@ -160,33 +160,33 @@ class TestApp(EWrapper, EClient):
     def tickPrice(self, tickerId, field, price, attribs):
         print('PRUEBAAA', 'A', tickerId, 'B', field,'C', price,'D', attribs)
 
-        # -------------------------------------------------------- #
+    # -------------------------------------------------------- #
     #           COLOCACION DE ORDENES EN EL MERCADO            #
     # -------------------------------------------------------- #
 
     def ColocarOrden(self, PrecioMkt): # NOO ESTA EN USO
         # Tipo de contrato
         contract = Contract()
-        contract.symbol = "EUR"
-        contract.secType = "CASH"
-        contract.exchange = 'IDEALPRO'
-        contract.currency = "USD"
-
-        # contract.symbol = "AMD"
-        # contract.secType = "OPT"
-        # contract.lastTradeDateOrContractMonth = '20200501'
-        # contract.exchange = 'SMART'
+        # contract.symbol = "EUR"
+        # contract.secType = "CASH"
+        # contract.exchange = 'IDEALPRO'
         # contract.currency = "USD"
-        # contract.multiplier = '100'
-        # contract.strike = '57'
-        # contract.right = 'C'
+
+        contract.symbol = "AAPL"
+        contract.secType = "OPT"
+        contract.lastTradeDateOrContractMonth = '20200724'
+        contract.exchange = 'SMART'
+        contract.currency = "USD"
+        contract.multiplier = '100'
+        contract.strike = '387.5'
+        contract.right = 'C'
 
         # contract.symbol = "AMD"
         # contract.secType = "STK"
         # contract.currency = "USD"
         # contract.exchange = "SMART"
 
-        bracket = self.BracketOrder(self.nextValidId, "BUY", 10, 0, round(PrecioMkt*1.2,3), round(PrecioMkt*0.9,3))
+        bracket = self.BracketOrder(self.nextValidId, "BUY", 1, 0, round(PrecioMkt*1.2,3), round(PrecioMkt*0.9,3))
         for o in bracket:
             # print('COLOCAR OOORDEN', o.orderId)
             self.placeOrder(o.orderId, contract, o)
@@ -326,26 +326,34 @@ def main():
     app = TestApp()
     app.connect('127.0.0.1', 7497, 0)
     contract = Contract()
-    # contract.symbol = "AMD"
-    # contract.secType = "STK"
-    # contract.currency = "USD"
-    # contract.exchange = "SMART"
+    contract.symbol = "AAPL"
+    contract.secType = "STK"
+    contract.currency = "USD"
+    contract.exchange = "SMART"
 
     # contract.symbol = "EUR"
     # contract.secType = "CASH"
     # contract.exchange = 'IDEALPRO'
     # contract.currency = "USD"
 
-    contract.symbol = "AMD"
-    contract.secType = "OPT"
-    contract.lastTradeDateOrContractMonth = '20200501'
-    contract.exchange = 'SMART'
-    contract.currency = "USD"
-    contract.multiplier = '100'
-    contract.strike = '57'
-    contract.right = 'C'
+    # contract.symbol = "AAPL"
+    # contract.secType = "OPT"
+    # contract.lastTradeDateOrContractMonth = '20200724'
+    # contract.exchange = 'SMART'
+    # contract.currency = "USD"
+    # contract.multiplier = '100'
+    # contract.strike = '387.5'
+    # contract.right = 'C'
 
-    app.reqHistoricalData(1, contract, '', '1 D', '1 min', 'TRADES', 0, 1, True, [])
+    app.reqHistoricalData(1, contract, '', '2000 S', '1 secs', 'MIDPOINT', 0, 1, True, [])
+    time.sleep(10)
+
+    contract1 = Contract()
+    contract1.symbol = "AAPL"
+    contract1.secType = "STK"
+    contract1.currency = "USD"
+    contract1.exchange = "SMART"
+    app.reqHistoricalData(1, contract1, '', '60 S', '1 min', 'MIDPOINT', 0, 1, True, [])
     # app.reqContractDetails(7, contract.OptionForQuery())
     # app.reqSecDefOptParams(2, "AMD", "", "STK", 8314)
     # app.reqMktData(57, contract, "233", False, False, [])

@@ -2,9 +2,272 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c61cd7-3350-4667-a07b-64c11425803a" name="Default Changelist" comment="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200708.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/AnalisisPrecision.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/AnalisisPrecision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200715K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190503K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190506K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190507K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190508K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190509K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190510K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190513K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190514K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190515K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190516K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190517K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190520K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190521K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190522K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190523K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190524K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190528K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190529K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190530K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190531K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190603K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190604K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190605K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190606K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190607K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190610K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190611K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190612K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190613K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190614K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190617K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190618K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190619K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190620K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190621K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190624K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190625K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190626K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190627K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190628K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190701K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190702K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190703K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190705K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190708K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190709K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190710K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190711K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190712K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190715K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190716K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190717K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190718K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190719K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190722K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190723K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190724K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190725K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190726K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190729K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190730K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190731K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190801K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190802K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190805K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190806K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190807K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190808K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190809K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190812K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190813K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190814K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190815K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190816K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190819K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190820K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190821K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190822K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190823K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190826K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190827K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190828K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190829K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190830K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190903K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190904K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190905K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190906K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190909K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190910K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190911K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190912K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190913K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190916K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190917K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190918K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190919K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190920K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190923K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190924K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190925K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190926K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190927K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20190930K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191001K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191002K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191003K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191004K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191007K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191008K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191009K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191010K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191011K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191014K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191015K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191016K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191017K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191018K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191021K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191022K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191023K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191024K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191025K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191028K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191029K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191030K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191031K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191101K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191104K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191105K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191106K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191107K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191108K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191111K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191112K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191113K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191114K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191115K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191118K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191119K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191120K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191121K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191122K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191125K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191126K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191127K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191129K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191202K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191203K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191204K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191205K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191206K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191209K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191210K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191211K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191212K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191213K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191216K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191217K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191218K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191219K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191220K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191223K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191224K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191226K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191227K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191230K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20191231K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200102K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200103K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200106K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200107K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200108K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200109K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200110K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200113K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200114K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200115K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200116K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200117K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200121K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200122K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200123K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200124K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200127K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200128K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200129K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200130K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200131K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200203K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200204K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200205K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200206K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200207K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200210K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200211K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200212K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200213K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200214K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200218K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200219K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200220K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200221K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200224K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200225K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200226K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200227K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200228K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200302K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200303K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200304K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200305K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200306K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200309K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200310K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200311K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200312K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200313K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200316K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200317K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200318K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200319K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200320K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200323K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200324K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200325K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200326K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200327K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200330K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200331K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200401K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200402K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200403K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200406K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200407K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200408K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200409K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200413K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200414K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200415K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200416K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200417K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200420K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200421K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200422K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200423K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200424K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200427K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200428K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200429K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200430K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200501K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200504K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200505K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200506K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200507K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200508K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6/DH20200511K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200716K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/GeneradorDatos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorDatos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IA/fig835.png" beforeDir="false" afterPath="$PROJECT_DIR$/IA/fig835.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JacKInvEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/JacKInvEST.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,23 +285,24 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_3_MINUTOS" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL6" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL7" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_3_MINUTOS" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST_MINUTOS" />
       <recent name="$PROJECT_DIR$/IA" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL7" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AMD" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -53,51 +317,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.IAJacKInvEST_Linea">
-    <configuration name="AnalisisPrecision_RegresionLogistica" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pythonclient" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IA" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/AnalisisPrecision_RegresionLogistica.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AnalisisPrecision_SVM" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pythonclient" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IA" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/AnalisisPrecision_SVM.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.GeneradorDatos_Minutos">
     <configuration name="GeneradorDatos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,6 +332,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/GeneradorDatos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GeneradorDatos_Minutos" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pythonclient" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/GeneradorDatos_Minutos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,7 +384,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="IAJacKInvEST_Linea2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="IAJacKInvEST_Linea_Minutos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,7 +397,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/IAJacKInvEST_Linea2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/IAJacKInvEST_Linea_Minutos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JacKInvEST" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pythonclient" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JacKInvEST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,11 +430,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GeneradorDatos_Minutos" />
         <item itemvalue="Python.IAJacKInvEST_Linea" />
         <item itemvalue="Python.GeneradorDatos" />
-        <item itemvalue="Python.IAJacKInvEST_Linea2" />
-        <item itemvalue="Python.AnalisisPrecision_SVM" />
-        <item itemvalue="Python.AnalisisPrecision_RegresionLogistica" />
+        <item itemvalue="Python.IAJacKInvEST_Linea_Minutos" />
+        <item itemvalue="Python.JacKInvEST" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +477,7 @@
       <workItem from="1593805185434" duration="21000" />
       <workItem from="1594041586560" duration="2048000" />
       <workItem from="1594228129245" duration="2419000" />
-      <workItem from="1594645890726" duration="2131000" />
+      <workItem from="1594645890726" duration="89725000" />
     </task>
     <task id="LOCAL-00001" summary="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
       <created>1594228209447</created>
@@ -270,16 +534,18 @@
     <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea2.coverage" NAME="IAJacKInvEST_Linea2 Coverage Results" MODIFIED="1593708667441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_RegresionLogistica.coverage" NAME="AnalisisPrecision_RegresionLogistica Coverage Results" MODIFIED="1591042824110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$yahoo.coverage" NAME="yahoo Coverage Results" MODIFIED="1590413353326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea_Minutos.coverage" NAME="IAJacKInvEST_Linea_Minutos Coverage Results" MODIFIED="1595388880878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_KNN.coverage" NAME="AnalisisPrecision_KNN Coverage Results" MODIFIED="1589400547375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1594905472251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1595423808708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos.coverage" NAME="AnalisisPrecision_ArbolDatos Coverage Results" MODIFIED="1590517749345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1588950810180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1595254604141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1589211715832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
     <SUITE FILE_PATH="coverage/pythonclient$yahoo__1_.coverage" NAME="yahoo (1) Coverage Results" MODIFIED="1589248552371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST.coverage" NAME="IAJacKInvEST Coverage Results" MODIFIED="1589407822340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$BorradorArchivos.coverage" NAME="BorradorArchivos Coverage Results" MODIFIED="1589477094556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$DatosHistoricos.coverage" NAME="DatosHistoricos Coverage Results" MODIFIED="1584393168012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos1dato.coverage" NAME="AnalisisPrecision_ArbolDatos1dato Coverage Results" MODIFIED="1590554905901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea.coverage" NAME="IAJacKInvEST_Linea Coverage Results" MODIFIED="1594906824798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea.coverage" NAME="IAJacKInvEST_Linea Coverage Results" MODIFIED="1595423940458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos_Minutos.coverage" NAME="GeneradorDatos_Minutos Coverage Results" MODIFIED="1595424106393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
   </component>
 </project>

@@ -94,8 +94,8 @@ def main():
 
     # '20130701 23:59:59 GMT'
 
-    app.reqHistoricalData(1, contract, '', '2 D', '5 mins', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT
-    app.reqHistoricalData(1, contract, '', '2 D', '5 mins', 'TRADES', 0, 1, True, [])
+    app.reqHistoricalData(1, contract, '', '1 D', '5 mins', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT
+    app.reqHistoricalData(1, contract, '', '1 D', '5 mins', 'TRADES', 0, 1, True, [])
     # Timer(5, sys.exit(101)).start()
     app.run()
 

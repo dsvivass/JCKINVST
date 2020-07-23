@@ -47,7 +47,7 @@ class TestApp(EWrapper, EClient):
     def error(self, reqId, errorCode, errorString):
         global EstadoConexion
         EstadoConexion = True  # Variable de prueba para que el codigo entre solo
-        print('Error: ', reqId, ' ', errorCode, ' ', errorString)
+        # print('Error: ', reqId, ' ', errorCode, ' ', errorString)
 
     # -------------------------------------------------------- #
     # RECOLECCION DE DATOS HISTORICOS Y ACTUALIZACION DE DATOS #
@@ -65,8 +65,8 @@ class TestApp(EWrapper, EClient):
     def historicalDataUpdate(self, reqId, bar):
         global Data, ult_bar_date, ult_Dat, checker, DataOrderStatus, PrecioMkt
 
-        print('AcontractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
-              bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
+        print('AcontractDetails: ', reqId, ' ', 'Fecha: ', self.FechaHoraActual(), ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
+              bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume) # bar.date
         if bar.date != ult_bar_date and ult_bar_date is not None:
             self.DataFrameHistoricUpdate(ult_Dat) # Concatena los datos en el Dataframe creado previamente y en el .txt
             if Data.iloc[-1]['Fecha: '] == Data.iloc[-2]['Fecha: ']:
@@ -74,7 +74,7 @@ class TestApp(EWrapper, EClient):
 
         ult_bar_date = bar.date
         ult_Dat = [reqId, bar.date, bar.high, bar.low, bar.open, bar.close]
-        print(checker)
+        print('[CHECKER ES: {}]'.format(checker))
         # Condicion para llamar a metodo de Colocacion de ordenes
         if Data['Punto cierre: '].iloc[-1] > 1.075 and checker is None :
             PrecioMkt = Data['Punto cierre: '].iloc[-1]
@@ -87,6 +87,9 @@ class TestApp(EWrapper, EClient):
 
         elif checker == 1:
             self.ActualizarOrden(PrecioMkt)
+
+        plt.plot([0,1],[0,1], 'b-')
+        plt.show()
 
 
             # contract = Contract()
@@ -148,17 +151,17 @@ class TestApp(EWrapper, EClient):
     #            DETALLES DE OPCIONES EN EL MERCADO            #
     # -------------------------------------------------------- #
 
-    def securityDefinitionOptionParameter(self, reqId, exchange, underlyingConId, tradingClass, multiplier, expirations, strikes):
-        super().securityDefinitionOptionParameter(reqId, exchange, underlyingConId, tradingClass, multiplier, expirations, strikes)
-        print("SecurityDefinitionOptionParameter.",
-        "ReqId:", reqId, "Exchange:", exchange, "Underlying conId:", underlyingConId, "TradingClass:", tradingClass, "Multiplier:", multiplier,
-        "Expirations:", expirations, "Strikes:", str(strikes))
-
-    def tickOptionComputation(self, tickerId, field, impliedVolatility, delta, optPrice, pvDividend, gamma, vega, theta, undPrice):
-        print('TICKOPCIONES',tickerId, field, impliedVolatility, delta, optPrice, pvDividend, gamma, vega, theta, undPrice)
-
-    def tickPrice(self, tickerId, field, price, attribs):
-        print('PRUEBAAA', 'A', tickerId, 'B', field,'C', price,'D', attribs)
+    # def securityDefinitionOptionParameter(self, reqId, exchange, underlyingConId, tradingClass, multiplier, expirations, strikes):
+    #     super().securityDefinitionOptionParameter(reqId, exchange, underlyingConId, tradingClass, multiplier, expirations, strikes)
+    #     print("SecurityDefinitionOptionParameter.",
+    #     "ReqId:", reqId, "Exchange:", exchange, "Underlying conId:", underlyingConId, "TradingClass:", tradingClass, "Multiplier:", multiplier,
+    #     "Expirations:", expirations, "Strikes:", str(strikes))
+    #
+    # def tickOptionComputation(self, tickerId, field, impliedVolatility, delta, optPrice, pvDividend, gamma, vega, theta, undPrice):
+    #     print('TICKOPCIONES',tickerId, field, impliedVolatility, delta, optPrice, pvDividend, gamma, vega, theta, undPrice)
+    #
+    # def tickPrice(self, tickerId, field, price, attribs):
+    #     print('PRUEBAAA', 'A', tickerId, 'B', field,'C', price,'D', attribs)
 
     # -------------------------------------------------------- #
     #           COLOCACION DE ORDENES EN EL MERCADO            #
@@ -201,7 +204,7 @@ class TestApp(EWrapper, EClient):
 
         bracket = self.BracketOrder(self.nextValidId, "BUY", 10, 0, round(PrecioMkt * 1.2, 3),
                                     round(PrecioMkt * 0.9, 3))
-        print(bracket)
+        # print(bracket)
         for o in bracket:
             # print('ACTUALIZAR OOORDEN', o.orderId)
             self.placeOrder(o.orderId, contract, o)
@@ -267,7 +270,7 @@ class TestApp(EWrapper, EClient):
         global DataOrderStatus
         # Data = pd.DataFrame(Info).drop([0]).rename(columns =
         # {0 : 'contractDetails: ', 1 : 'Fecha: ', 2 : 'Punto alto: ', 3 : 'Punto bajo: ', 4 : 'Punto apertura: ', 5 : 'Punto cierre: '})
-        print(Data, DataOrderStatus, DataOrderStatus['ID de orden: '])
+        # print(Data, DataOrderStatus, DataOrderStatus['ID de orden: '])
         f = interp1d(list(Data.index), Data['Punto cierre: '], kind='cubic')
         plt.plot(np.linspace(0, len(Data)-1, num=200), f(np.linspace(0, len(Data)-1, num=200)), 'b-')
         plt.show()
@@ -345,23 +348,25 @@ def main():
     # contract.strike = '387.5'
     # contract.right = 'C'
 
-    app.reqHistoricalData(1, contract, '', '2000 S', '1 secs', 'MIDPOINT', 0, 1, True, [])
-    time.sleep(10)
+    # app.reqHistoricalData(1, contract, '', '2000 S', '1 secs', 'MIDPOINT', 0, 1, True, [])
+    # time.sleep(10)
 
     contract1 = Contract()
     contract1.symbol = "AAPL"
     contract1.secType = "STK"
     contract1.currency = "USD"
     contract1.exchange = "SMART"
-    app.reqHistoricalData(1, contract1, '', '60 S', '1 min', 'MIDPOINT', 0, 1, True, [])
+    app.reqHistoricalData(1, contract1, '', '1 D', '5 min', 'MIDPOINT', 0, 1, True, [])
     # app.reqContractDetails(7, contract.OptionForQuery())
     # app.reqSecDefOptParams(2, "AMD", "", "STK", 8314)
     # app.reqMktData(57, contract, "233", False, False, [])
     # Timer(20, app.stop).start()
     app.run()
 
-    if EstadoConexion is False: # Mira si entra al atributo error
-        main()
+    # if EstadoConexion is False: # Mira si entra al atributo error
+    #     time.sleep(3)
+    #     print('[INTENTANDO CONECTAR DE NUEVO]')
+    #     main()
 
 
     # if EstadoConexion is False: # Mira si entra al atributo error

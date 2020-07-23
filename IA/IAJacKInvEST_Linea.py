@@ -35,7 +35,7 @@ def OrganizadorDfGeneral(dataFrame):
     # for i in dataFrame.index:
     #     if math.isnan(dataFrame.loc[i, '00:00:00']) == True or math.isnan(dataFrame.loc[i, '23:59:00']) == True:
     #         dataFrame.drop(i, inplace=True)
-    dataFrame.to_excel('/Users/dvs/Desktop/df.xlsx')
+    # dataFrame.to_excel('/Users/dvs/Desktop/df.xlsx')
     return dataFrame.dropna(axis=1, how='any')
 
 
@@ -128,27 +128,31 @@ from matplotlib.ticker import FormatStrFormatter
 fig, ax = plt.subplots()
 i, DatosReales, DatosPredict = 1, [], []
 horas = CadenaHoras(HInicial=(8,30,0), HFinal=(15,0,0))
-for hora in horas:
-    tini2 = time.time()
-    y = df[[hora]]
-    # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,3)),
-    #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=20, x=x, y=y)
+t0 = time.time()
+print('Tiempo inicial prediccion ')
+# for hora in horas:
+tini2 = time.time()
+y = df[horas]
+# MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,3)),
+#                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=20, x=x, y=y)
 
-    input = [('polinomio',PolynomialFeatures(degree=2)), ('regresion', Ridge(alpha=1))]
-    pipe = Pipeline(steps=input)
-    pipe.fit(x, y)
-    Predict = pipe.predict(df_org[x.columns])
-    DatosPredict.append(Predict[0][0])
-    # try:
-    #     DatosPredict.append(Predict[0][0])
-    # except:
-    #     DatosPredict.append(Predict.max)
+input = [('polinomio',PolynomialFeatures(degree=2)), ('regresion', Ridge(alpha=1))]
+pipe = Pipeline(steps=input)
+pipe.fit(x, y)
+Predict = pipe.predict(df_org[x.columns])
+# DatosPredict.append(Predict[0][0])
+# try:
+#     DatosPredict.append(Predict[0][0])
+# except:
+#     DatosPredict.append(Predict.max)
+for hora in horas:
     try:
         DatosReales.append(df_org.loc[df_org.index[0], hora])
     except:
         DatosReales.append(df_org.loc[df_org.index[0]].max())
-    print(f'[MEJOR AJUSTE: {i} de {len(horas)}], Tiempo iteracion {time.time() - tini2}: ', )
-    i=i+1
+print(f'[MEJOR AJUSTE: {i} de {len(horas)}], Tiempo iteracion {time.time() - tini2}: ', )
+i=i+1
 
+print('Final tiempo, antes de graficar: ', time.time() - t0)
 print(f'[TIEMPO TOTAL: {time.time() - tini}]')
-Graficar(DatosPredict, DatosReales)
+Graficar(Predict[0], DatosReales)

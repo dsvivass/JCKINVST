@@ -65,14 +65,18 @@ class TestApp(EWrapper, EClient):
     def historicalDataUpdate(self, reqId, bar):
         global Data, ult_bar_date, ult_Dat, checker, DataOrderStatus, PrecioMkt
 
-        print('AcontractDetails: ', reqId, ' ', 'Fecha: ', self.FechaHoraActual(), ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
+        print('AcontractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
               bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume) # bar.date
+        print(Data)
+        print(bar.date != ult_bar_date and ult_bar_date is not None)
         if bar.date != ult_bar_date and ult_bar_date is not None:
             self.DataFrameHistoricUpdate(ult_Dat) # Concatena los datos en el Dataframe creado previamente y en el .txt
             if Data.iloc[-1]['Fecha: '] == Data.iloc[-2]['Fecha: ']:
                 Data = Data.drop(index = Data.index[len(Data) - 2]) # Borra fila en caso de haber un dato con fecha repetida
 
+        print(ult_bar_date)
         ult_bar_date = bar.date
+        print(bar.date)
         ult_Dat = [reqId, bar.date, bar.high, bar.low, bar.open, bar.close]
         print('[CHECKER ES: {}]'.format(checker))
         # Condicion para llamar a metodo de Colocacion de ordenes
@@ -88,8 +92,8 @@ class TestApp(EWrapper, EClient):
         elif checker == 1:
             self.ActualizarOrden(PrecioMkt)
 
-        plt.plot([0,1],[0,1], 'b-')
-        plt.show()
+        # plt.plot([0,1],[0,1], 'b-')
+        # plt.show()
 
 
             # contract = Contract()
@@ -328,6 +332,7 @@ def main():
 
     app = TestApp()
     app.connect('127.0.0.1', 7497, 0)
+    time.sleep(1)
     contract = Contract()
     contract.symbol = "AAPL"
     contract.secType = "STK"
@@ -351,12 +356,8 @@ def main():
     # app.reqHistoricalData(1, contract, '', '2000 S', '1 secs', 'MIDPOINT', 0, 1, True, [])
     # time.sleep(10)
 
-    contract1 = Contract()
-    contract1.symbol = "AAPL"
-    contract1.secType = "STK"
-    contract1.currency = "USD"
-    contract1.exchange = "SMART"
-    app.reqHistoricalData(1, contract1, '', '1 D', '5 min', 'MIDPOINT', 0, 1, True, [])
+    app.reqHistoricalData(1, contract, '', '1 D', '5 mins', 'MIDPOINT', 0, 1, True, [])
+    time.sleep(1)
     # app.reqContractDetails(7, contract.OptionForQuery())
     # app.reqSecDefOptParams(2, "AMD", "", "STK", 8314)
     # app.reqMktData(57, contract, "233", False, False, [])
@@ -369,8 +370,10 @@ def main():
     #     main()
 
 
-    # if EstadoConexion is False: # Mira si entra al atributo error
-    #     main()
+    if EstadoConexion is False: # Mira si entra al atributo error
+        print
+        time.sleep(1)
+        main()
 
 if __name__ == '__main__':
     # with concurrent.futures.ThreadPoolExecutor() as ejecutor:

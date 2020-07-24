@@ -118,7 +118,7 @@ df = OrganizadorDfGeneral(df)
 #                                          alpha=[1], cv=4, x=x, y=y) # 0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000
 
 os.chdir(DirAct)
-os.chdir('DatosHistoricos/AAPL_TEST')
+os.chdir('DatosHistoricos/AAPL_TEST_MINUTOS')
 ls = sorted(os.listdir())
 
 for file in ls:
@@ -129,7 +129,7 @@ for file in ls:
 from matplotlib.ticker import FormatStrFormatter
 fig, ax = plt.subplots()
 i, DatosReales, DatosPredict = 1, [], []
-horas = CadenaHoras(HInicial=(8,30,0), HFinal=(8,39,59))
+horas = CadenaHoras(HInicial=(8,31,0), HFinal=(8,39,59))
 
 # t0 = time.time()
 #
@@ -166,7 +166,7 @@ i_min = 10 # Numero minimo de segundos antes de analizar
 
 inversion = False
 p_inv, p_ven, tipo = None, None, None
-for hora in CadenaHoras(HInicial=(8,30,0), HFinal=(8,39,59), paso_segundos=1):
+for hora in CadenaHoras(HInicial=(8,31,0), HFinal=(8,39,59), paso_segundos=1):
     Hfinal = tuple(map(int,hora.split(':')))
     x = df[CadenaHoras(HInicial=(8,6,40), HFinal=Hfinal, paso_segundos=1)]
     y = df[horas]
@@ -219,9 +219,20 @@ for hora in CadenaHoras(HInicial=(8,30,0), HFinal=(8,39,59), paso_segundos=1):
     #     print('i: es', i)
         # print(len(Predict[0]))
         # print(len(df_org.values[0][-600:]))
+
+
         # ax1 = plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
         # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
         # plt.axvline(i, color='r')
+        # try:
+        #     plt.axvline(statistics.mean(lista_max), color='k')
+        #     plt.axvline(statistics.mean(lista_min), color='y')
+        #     plt.axvspan(statistics.mean(lista_max)-statistics.stdev(lista_max), statistics.mean(lista_max)+statistics.stdev(lista_max), alpha=0.5, color='k')
+        #     plt.axvspan(statistics.mean(lista_min)-statistics.stdev(lista_min), statistics.mean(lista_min)+statistics.stdev(lista_min), alpha=0.5, color='y')
+        # except :
+        #     continue
+
+
         try:
             # print(lista_max)
             # print(lista_min)
@@ -230,12 +241,12 @@ for hora in CadenaHoras(HInicial=(8,30,0), HFinal=(8,39,59), paso_segundos=1):
             # plt.axvspan(statistics.mean(lista_max)-statistics.stdev(lista_max), statistics.mean(lista_max)+statistics.stdev(lista_max), alpha=0.5, color='k')
             # plt.axvspan(statistics.mean(lista_min)-statistics.stdev(lista_min), statistics.mean(lista_min)+statistics.stdev(lista_min), alpha=0.5, color='y')
             #
-            if i > statistics.mean(lista_min)-statistics.stdev(lista_min) and i < statistics.mean(lista_min)+statistics.stdev(lista_min) and inversion == False:
+            if i >= statistics.mean(lista_min)-statistics.stdev(lista_min) and i <= statistics.mean(lista_min)+statistics.stdev(lista_min) and inversion == False:
                 inversion = True
                 p_inv = i
                 tipo = 'C'
                 print('INVERSION CALL')
-            elif i > statistics.mean(lista_max)-statistics.stdev(lista_max) and i < statistics.mean(lista_max)+statistics.stdev(lista_max) and inversion == True and tipo is not 'P':
+            elif i >= statistics.mean(lista_max)-statistics.stdev(lista_max) and i <= statistics.mean(lista_max)+statistics.stdev(lista_max) and inversion == True and tipo is not 'P':
                 p_ven = i
                 ax1 = plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
                 plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
@@ -253,13 +264,13 @@ for hora in CadenaHoras(HInicial=(8,30,0), HFinal=(8,39,59), paso_segundos=1):
                 print('p_inv: ', p_inv, ', p_ven: ', p_ven)
                 time.sleep(1000)
 
-            if i > statistics.mean(lista_max)-statistics.stdev(lista_max) and i < statistics.mean(lista_max)+statistics.stdev(lista_max) and inversion == False:
+            if i >= statistics.mean(lista_max)-statistics.stdev(lista_max) and i <= statistics.mean(lista_max)+statistics.stdev(lista_max) and inversion == False:
                 inversion = True
                 p_inv = i
                 tipo = 'P'
                 print('INVERSION PUT')
 
-            elif i > statistics.mean(lista_min)-statistics.stdev(lista_min) and i < statistics.mean(lista_min)+statistics.stdev(lista_min) and inversion == True and tipo is not 'C':
+            elif i >= statistics.mean(lista_min)-statistics.stdev(lista_min) and i <= statistics.mean(lista_min)+statistics.stdev(lista_min) and inversion == True and tipo is not 'C':
                 p_ven = i
                 ax1 = plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
                 plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
@@ -280,6 +291,10 @@ for hora in CadenaHoras(HInicial=(8,30,0), HFinal=(8,39,59), paso_segundos=1):
 
         except:
             continue
+
+
+
+
         # plt.title(str(i))
         # plt.show()
         # time.sleep(2)

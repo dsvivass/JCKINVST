@@ -2,13 +2,175 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c61cd7-3350-4667-a07b-64c11425803a" name="Default Changelist" comment="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200722.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200722K.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/GeneradorDatos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorDatos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/fig835.png" beforeDir="false" afterPath="$PROJECT_DIR$/IA/fig835.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200707.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST_MINUTOS/DH20200707.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200720.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200720.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200723.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200723K.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/GeneradorDatos_Minutos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorDatos_Minutos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea_Minutos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea_Minutos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145500_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145500_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P150000_20200722.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P150000_20200722_columnas.sav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/JacKInvEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/JacKInvEST.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,24 +189,24 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST_MINUTOS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST_MINUTOS" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_3_MINUTOS" />
+      <recent name="$PROJECT_DIR$/IA" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
+      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST_MINUTOS" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/\" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2" />
       <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_3_MINUTOS" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST_MINUTOS" />
-      <recent name="$PROJECT_DIR$/IA" />
-      <recent name="$PROJECT_DIR$/IA/DatosHistoricos/AAPL3" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,7 +244,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="GeneradorDatos_Minutos" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="GeneradorPredicciones" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,7 +257,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/GeneradorDatos_Minutos.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/GeneradorPredicciones.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,10 +335,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.JacKInvEST" />
-        <item itemvalue="Python.GeneradorDatos" />
         <item itemvalue="Python.PRUEBA.PY" />
+        <item itemvalue="Python.GeneradorDatos" />
+        <item itemvalue="Python.GeneradorPredicciones" />
         <item itemvalue="Python.IAJacKInvEST_Linea_Minutos" />
-        <item itemvalue="Python.GeneradorDatos_Minutos" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +381,8 @@
       <workItem from="1593805185434" duration="21000" />
       <workItem from="1594041586560" duration="2048000" />
       <workItem from="1594228129245" duration="2419000" />
-      <workItem from="1594645890726" duration="112127000" />
+      <workItem from="1594645890726" duration="114367000" />
+      <workItem from="1595546717408" duration="8523000" />
     </task>
     <task id="LOCAL-00001" summary="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
       <created>1594228209447</created>
@@ -276,12 +439,12 @@
     <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea2.coverage" NAME="IAJacKInvEST_Linea2 Coverage Results" MODIFIED="1593708667441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_RegresionLogistica.coverage" NAME="AnalisisPrecision_RegresionLogistica Coverage Results" MODIFIED="1591042824110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$yahoo.coverage" NAME="yahoo Coverage Results" MODIFIED="1590413353326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$GeneradorPredicciones.coverage" NAME="GeneradorPredicciones Coverage Results" MODIFIED="1595509395352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea_Minutos.coverage" NAME="IAJacKInvEST_Linea_Minutos Coverage Results" MODIFIED="1595510416619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea_Minutos.coverage" NAME="IAJacKInvEST_Linea_Minutos Coverage Results" MODIFIED="1595549118092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorPredicciones.coverage" NAME="GeneradorPredicciones Coverage Results" MODIFIED="1595596047608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_KNN.coverage" NAME="AnalisisPrecision_KNN Coverage Results" MODIFIED="1589400547375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1595518234174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1595598751644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos.coverage" NAME="AnalisisPrecision_ArbolDatos Coverage Results" MODIFIED="1590517749345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1595518797810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1595601115726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1589211715832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
     <SUITE FILE_PATH="coverage/pythonclient$yahoo__1_.coverage" NAME="yahoo (1) Coverage Results" MODIFIED="1589248552371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST.coverage" NAME="IAJacKInvEST Coverage Results" MODIFIED="1589407822340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
@@ -289,7 +452,7 @@
     <SUITE FILE_PATH="coverage/pythonclient$DatosHistoricos.coverage" NAME="DatosHistoricos Coverage Results" MODIFIED="1584393168012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos1dato.coverage" NAME="AnalisisPrecision_ArbolDatos1dato Coverage Results" MODIFIED="1590554905901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea.coverage" NAME="IAJacKInvEST_Linea Coverage Results" MODIFIED="1595510206814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$PRUEBA_PY.coverage" NAME="PRUEBA.PY Coverage Results" MODIFIED="1595513646788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos_Minutos.coverage" NAME="GeneradorDatos_Minutos Coverage Results" MODIFIED="1595510348945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$PRUEBA_PY.coverage" NAME="PRUEBA.PY Coverage Results" MODIFIED="1595598788907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos_Minutos.coverage" NAME="GeneradorDatos_Minutos Coverage Results" MODIFIED="1595544110730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
   </component>
 </project>

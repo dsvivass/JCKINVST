@@ -124,16 +124,16 @@ def main():
 
 
 
-    # fechas, dias = CadenaHoras(DInicial=(1,5,2017), DFinal=(1,1,2018))
-    # i = 1
-    # for dia,fecha in zip(dias, fechas):
-    #     app.reqHistoricalData(1, contract, fecha + ' 13:40:00 GMT', '2000 S', '1 secs', 'MIDPOINT', 0, 1, False, [])  # MIDPOINT
-    #
-    #     time.sleep(10)
-    #     print(i,'de ', len(fechas))
-    #     i+=1
+    fechas, dias = CadenaHoras(DInicial=(23,7,2020), DFinal=(23,7,2020))
+    i = 1
+    for dia,fecha in zip(dias, fechas):
+        app.reqHistoricalData(1, contract, fecha + ' 13:40:00 GMT', '2000 S', '1 secs', 'MIDPOINT', 0, 1, False, [])  # MIDPOINT
 
-    app.reqHistoricalData(1, contract, '', '2000 S', '1 secs', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT
+        time.sleep(10)
+        print(i,'de ', len(fechas))
+        i+=1
+
+    # app.reqHistoricalData(1, contract, '', '2000 S', '1 secs', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT ++++++++++++++++++++++ FUNCIONA
 
 
 

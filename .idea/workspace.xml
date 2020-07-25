@@ -3,174 +3,396 @@
   <component name="ChangeListManager">
     <list default="true" id="a7c61cd7-3350-4667-a07b-64c11425803a" name="Default Changelist" comment="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200707.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST_MINUTOS/DH20200707.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200720.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200720.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_MINUTOS_2/DH20200723.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200723K.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/GeneradorDatos_Minutos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorDatos_Minutos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea_Minutos.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea_Minutos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145000_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145500_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145500_20200722_columnas.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P150000_20200722.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P150000_20200722_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:45:47/DataFrame20-07-2020 08:45:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:45:47/ExecDetailsDataFrame20-07-2020 08:45:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:45:47/OpenOrdDataFrame20-07-2020 08:45:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:45:47/OrdStatDataFrame20-07-2020 08:45:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:48:47/OpenOrdDataFrame20-07-2020 08:48:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:48:47/OrdStatDataFrame20-07-2020 08:48:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:49:05/DataFrame20-07-2020 08:49:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:49:05/ExecDetailsDataFrame20-07-2020 08:49:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:49:05/OpenOrdDataFrame20-07-2020 08:49:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:49:05/OrdStatDataFrame20-07-2020 08:49:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:53:13/DataFrame20-07-2020 08:53:13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:53:13/OpenOrdDataFrame20-07-2020 08:53:13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:53:13/OrdStatDataFrame20-07-2020 08:53:13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:53:54/DataFrame20-07-2020 08:53:54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:53:54/OpenOrdDataFrame20-07-2020 08:53:54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:53:54/OrdStatDataFrame20-07-2020 08:53:54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:54:56/OpenOrdDataFrame20-07-2020 08:54:56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:54:56/OrdStatDataFrame20-07-2020 08:54:56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:55:57/DataFrame20-07-2020 08:55:57.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:55:57/OpenOrdDataFrame20-07-2020 08:55:57.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:55:57/OrdStatDataFrame20-07-2020 08:55:57.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:57:16/DataFrame20-07-2020 08:57:16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:57:16/OpenOrdDataFrame20-07-2020 08:57:16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:57:16/OrdStatDataFrame20-07-2020 08:57:16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:58:50/DataFrame20-07-2020 08:58:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:58:50/ExecDetailsDataFrame20-07-2020 08:58:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:58:50/OpenOrdDataFrame20-07-2020 08:58:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 08:58:50/OrdStatDataFrame20-07-2020 08:58:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:00:16/DataFrame20-07-2020 09:00:16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:00:16/OpenOrdDataFrame20-07-2020 09:00:16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:00:16/OrdStatDataFrame20-07-2020 09:00:16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:10:59/DataFrame20-07-2020 09:10:59.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:10:59/OpenOrdDataFrame20-07-2020 09:10:59.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:10:59/OrdStatDataFrame20-07-2020 09:10:59.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:12:19/DataFrame20-07-2020 09:12:19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:12:19/OpenOrdDataFrame20-07-2020 09:12:19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:12:19/OrdStatDataFrame20-07-2020 09:12:19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:13:50/DataFrame20-07-2020 09:13:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:13:50/OpenOrdDataFrame20-07-2020 09:13:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:13:50/OrdStatDataFrame20-07-2020 09:13:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:16:47/DataFrame20-07-2020 09:16:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:16:47/OpenOrdDataFrame20-07-2020 09:16:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame20-07-2020 09:16:47/OrdStatDataFrame20-07-2020 09:16:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 19:51:02/DataFrame21-04-2020 19:51:02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 19:51:02/OrdStatDataFrame21-04-2020 19:51:02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 19:57:23/DataFrame21-04-2020 19:57:23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 19:57:23/OrdStatDataFrame21-04-2020 19:57:23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 20:18:07/DataFrame21-04-2020 20:18:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 20:18:07/OpenOrdDataFrame21-04-2020 20:18:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 20:18:07/OrdStatDataFrame21-04-2020 20:18:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 20:21:10/OpenOrdDataFrame21-04-2020 20:21:10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame21-04-2020 20:21:10/OrdStatDataFrame21-04-2020 20:21:10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:14:50/DataFrame22-04-2020 13:14:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:14:50/OpenOrdDataFrame22-04-2020 13:14:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:14:50/OrdStatDataFrame22-04-2020 13:14:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:26:58/DataFrame22-04-2020 13:26:58.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:26:58/OpenOrdDataFrame22-04-2020 13:26:58.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:26:58/OrdStatDataFrame22-04-2020 13:26:58.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:35:14/DataFrame22-04-2020 13:35:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:35:14/OpenOrdDataFrame22-04-2020 13:35:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:35:14/OrdStatDataFrame22-04-2020 13:35:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:52:26/DataFrame22-04-2020 13:52:26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:52:26/ExecDetailsDataFrame22-04-2020 13:52:26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:52:26/OpenOrdDataFrame22-04-2020 13:52:26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:52:26/OrdStatDataFrame22-04-2020 13:52:26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:55:11/DataFrame22-04-2020 13:55:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:55:11/ExecDetailsDataFrame22-04-2020 13:55:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:55:11/OpenOrdDataFrame22-04-2020 13:55:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame22-04-2020 13:55:11/OrdStatDataFrame22-04-2020 13:55:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-04-2020 15:34:18/DataFrame23-04-2020 15:34:18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-04-2020 15:34:18/OpenOrdDataFrame23-04-2020 15:34:18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-04-2020 15:34:18/OrdStatDataFrame23-04-2020 15:34:18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:19:32/DataFrame23-07-2020 09:19:32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:21:05/DataFrame23-07-2020 09:21:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:21:28/DataFrame23-07-2020 09:21:28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:21:28/ExecDetailsDataFrame23-07-2020 09:21:28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:21:28/OpenOrdDataFrame23-07-2020 09:21:28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:21:28/OrdStatDataFrame23-07-2020 09:21:28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:27:20/DataFrame23-07-2020 09:27:20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:29:13/DataFrame23-07-2020 09:29:13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame23-07-2020 09:30:50/DataFrame23-07-2020 09:30:50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-04-2020 16:50:34/DataFrame24-04-2020 16:50:34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-04-2020 21:45:32/DataFrame24-04-2020 21:45:32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-04-2020 21:48:20/DataFrame24-04-2020 21:48:20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-04-2020 21:52:39/DataFrame24-04-2020 21:52:39.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-04-2020 21:54:51/DataFrame24-04-2020 21:54:51.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-04-2020 21:59:03/DataFrame24-04-2020 21:59:03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:03:46/DataFrame24-07-2020 09:03:46.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:04:20/DataFrame24-07-2020 09:04:20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:09:35/DataFrame24-07-2020 09:09:35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:11:56/DataFrame24-07-2020 09:11:56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:19:27/DataFrame24-07-2020 09:19:27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:21:15/DataFrame24-07-2020 09:21:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:21:15/ExecDetailsDataFrame24-07-2020 09:21:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:21:15/OpenOrdDataFrame24-07-2020 09:21:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:21:15/OrdStatDataFrame24-07-2020 09:21:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:29:06/DataFrame24-07-2020 09:29:06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame24-07-2020 09:31:57/DataFrame24-07-2020 09:31:57.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame25-04-2020 09:32:11/DataFrame25-04-2020 09:32:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame25-04-2020 14:18:20/DataFrame25-04-2020 14:18:20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 10:24:07/DataFrame27-04-2020 10:24:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 10:27:43/DataFrame27-04-2020 10:27:43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 10:27:43/OpenOrdDataFrame27-04-2020 10:27:43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 10:27:43/OrdStatDataFrame27-04-2020 10:27:43.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:25:54/DataFrame27-04-2020 11:25:54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:25:54/ExecDetailsDataFrame27-04-2020 11:25:54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:25:54/OpenOrdDataFrame27-04-2020 11:25:54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:25:54/OrdStatDataFrame27-04-2020 11:25:54.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:35:14/DataFrame27-04-2020 11:35:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:35:14/ExecDetailsDataFrame27-04-2020 11:35:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:35:14/OpenOrdDataFrame27-04-2020 11:35:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:35:14/OrdStatDataFrame27-04-2020 11:35:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:40:36/DataFrame27-04-2020 11:40:36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:40:36/ExecDetailsDataFrame27-04-2020 11:40:36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:40:36/OpenOrdDataFrame27-04-2020 11:40:36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:40:36/OrdStatDataFrame27-04-2020 11:40:36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:42:05/DataFrame27-04-2020 11:42:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:42:05/ExecDetailsDataFrame27-04-2020 11:42:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:42:05/OpenOrdDataFrame27-04-2020 11:42:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:42:05/OrdStatDataFrame27-04-2020 11:42:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:45:22/DataFrame27-04-2020 11:45:22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:45:22/ExecDetailsDataFrame27-04-2020 11:45:22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:45:22/OpenOrdDataFrame27-04-2020 11:45:22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:45:22/OrdStatDataFrame27-04-2020 11:45:22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:55:01/DataFrame27-04-2020 11:55:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:55:01/ExecDetailsDataFrame27-04-2020 11:55:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:55:01/OpenOrdDataFrame27-04-2020 11:55:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:55:01/OrdStatDataFrame27-04-2020 11:55:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:56:56/DataFrame27-04-2020 11:56:56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:56:56/ExecDetailsDataFrame27-04-2020 11:56:56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:56:56/OpenOrdDataFrame27-04-2020 11:56:56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:56:56/OrdStatDataFrame27-04-2020 11:56:56.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:58:08/DataFrame27-04-2020 11:58:08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:59:31/DataFrame27-04-2020 11:59:31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:59:31/ExecDetailsDataFrame27-04-2020 11:59:31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:59:31/OpenOrdDataFrame27-04-2020 11:59:31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 11:59:31/OrdStatDataFrame27-04-2020 11:59:31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:00:25/DataFrame27-04-2020 12:00:25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:03:25/DataFrame27-04-2020 12:03:25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:04:07/DataFrame27-04-2020 12:04:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:04:07/OpenOrdDataFrame27-04-2020 12:04:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:04:07/OrdStatDataFrame27-04-2020 12:04:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:05:00/DataFrame27-04-2020 12:05:00.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:05:00/ExecDetailsDataFrame27-04-2020 12:05:00.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:05:00/OpenOrdDataFrame27-04-2020 12:05:00.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:05:00/OrdStatDataFrame27-04-2020 12:05:00.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:07:34/DataFrame27-04-2020 12:07:34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:08:09/DataFrame27-04-2020 12:08:09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:09:11/DataFrame27-04-2020 12:09:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:09:11/ExecDetailsDataFrame27-04-2020 12:09:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:09:11/OpenOrdDataFrame27-04-2020 12:09:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:09:11/OrdStatDataFrame27-04-2020 12:09:11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:20:33/DataFrame27-04-2020 12:20:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:20:33/ExecDetailsDataFrame27-04-2020 12:20:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:20:33/OpenOrdDataFrame27-04-2020 12:20:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:20:33/OrdStatDataFrame27-04-2020 12:20:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:22:07/DataFrame27-04-2020 12:22:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:22:07/ExecDetailsDataFrame27-04-2020 12:22:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:22:07/OpenOrdDataFrame27-04-2020 12:22:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:22:07/OrdStatDataFrame27-04-2020 12:22:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:25:27/DataFrame27-04-2020 12:25:27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:26:15/DataFrame27-04-2020 12:26:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:26:15/ExecDetailsDataFrame27-04-2020 12:26:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:26:15/OpenOrdDataFrame27-04-2020 12:26:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:26:15/OrdStatDataFrame27-04-2020 12:26:15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:34:27/DataFrame27-04-2020 12:34:27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:01/DataFrame27-04-2020 12:35:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:01/ExecDetailsDataFrame27-04-2020 12:35:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:01/OpenOrdDataFrame27-04-2020 12:35:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:01/OrdStatDataFrame27-04-2020 12:35:01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:33/DataFrame27-04-2020 12:35:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:33/ExecDetailsDataFrame27-04-2020 12:35:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:33/OpenOrdDataFrame27-04-2020 12:35:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:35:33/OrdStatDataFrame27-04-2020 12:35:33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:50:35/DataFrame27-04-2020 12:50:35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:50:35/OpenOrdDataFrame27-04-2020 12:50:35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:50:35/OrdStatDataFrame27-04-2020 12:50:35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:52:48/DataFrame27-04-2020 12:52:48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:52:48/OpenOrdDataFrame27-04-2020 12:52:48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:52:48/OrdStatDataFrame27-04-2020 12:52:48.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:54:07/DataFrame27-04-2020 12:54:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:54:07/OpenOrdDataFrame27-04-2020 12:54:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:54:07/OrdStatDataFrame27-04-2020 12:54:07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:57:21/DataFrame27-04-2020 12:57:21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:57:21/OpenOrdDataFrame27-04-2020 12:57:21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:57:21/OrdStatDataFrame27-04-2020 12:57:21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:59:49/DataFrame27-04-2020 12:59:49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:59:49/ExecDetailsDataFrame27-04-2020 12:59:49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:59:49/OpenOrdDataFrame27-04-2020 12:59:49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 12:59:49/OrdStatDataFrame27-04-2020 12:59:49.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:05:30/DataFrame27-04-2020 13:05:30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:05:30/ExecDetailsDataFrame27-04-2020 13:05:30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:05:30/OpenOrdDataFrame27-04-2020 13:05:30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:05:30/OrdStatDataFrame27-04-2020 13:05:30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:14:14/DataFrame27-04-2020 13:14:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:14:14/ExecDetailsDataFrame27-04-2020 13:14:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:14:14/OpenOrdDataFrame27-04-2020 13:14:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:14:14/OrdStatDataFrame27-04-2020 13:14:14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:16:53/DataFrame27-04-2020 13:16:53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:16:53/ExecDetailsDataFrame27-04-2020 13:16:53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:16:53/OpenOrdDataFrame27-04-2020 13:16:53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:16:53/OrdStatDataFrame27-04-2020 13:16:53.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:20:47/DataFrame27-04-2020 13:20:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:20:47/ExecDetailsDataFrame27-04-2020 13:20:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:20:47/OpenOrdDataFrame27-04-2020 13:20:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:20:47/OrdStatDataFrame27-04-2020 13:20:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:23:47/DataFrame27-04-2020 13:23:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:23:47/ExecDetailsDataFrame27-04-2020 13:23:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:23:47/OpenOrdDataFrame27-04-2020 13:23:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:23:47/OrdStatDataFrame27-04-2020 13:23:47.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:30:06/DataFrame27-04-2020 13:30:06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:30:06/OpenOrdDataFrame27-04-2020 13:30:06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:30:06/OrdStatDataFrame27-04-2020 13:30:06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:56:05/DataFrame27-04-2020 13:56:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:56:05/ExecDetailsDataFrame27-04-2020 13:56:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:56:05/OpenOrdDataFrame27-04-2020 13:56:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatosInversionesHistoricas/DataFrame27-04-2020 13:56:05/OrdStatDataFrame27-04-2020 13:56:05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200713K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200713K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200714K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200714K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200715K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200715K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200716K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200716K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200717K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200717K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200720K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200720K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200721K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200721K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200722K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200722K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL/DH20200723K.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/DatosHistoricos/AAPL_TEST/DH20200723K.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/GeneradorPredicciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/GeneradorPredicciones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/IAJacKInvEST_Linea.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P082500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P083500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P084500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P085500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P090500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P091500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P092500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P093500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P094500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P095500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P100500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P101500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P102500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P103500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P104500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P105500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P110500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P111500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P112500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P113500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P114500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P115500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P120500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P121500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P122500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P123500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P124500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P125500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P130500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P131500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P132500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P133500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P134500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P135500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P140500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P141500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P142500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P143500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P144500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145000_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145500_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P145500_20200723_columnas.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P150000_20200723.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Predicciones/AAPL/P150000_20200723_columnas.sav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/JacKInvEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/JacKInvEST.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -222,28 +444,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.JacKInvEST">
-    <configuration name="GeneradorDatos" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pythonclient" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/IA" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/GeneradorDatos.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="GeneradorPredicciones" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -266,7 +466,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="IAJacKInvEST_Linea_Minutos" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="IAJacKInvEST_Linea" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pythonclient" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,7 +479,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/IAJacKInvEST_Linea_Minutos.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/IA/IAJacKInvEST_Linea.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -332,13 +532,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="prueba1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pythonclient" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CODIGOS PRUEBA" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CODIGOS PRUEBA/prueba1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.JacKInvEST" />
-        <item itemvalue="Python.PRUEBA.PY" />
-        <item itemvalue="Python.GeneradorDatos" />
         <item itemvalue="Python.GeneradorPredicciones" />
-        <item itemvalue="Python.IAJacKInvEST_Linea_Minutos" />
+        <item itemvalue="Python.prueba1" />
+        <item itemvalue="Python.PRUEBA.PY" />
+        <item itemvalue="Python.IAJacKInvEST_Linea" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +604,7 @@
       <workItem from="1594041586560" duration="2048000" />
       <workItem from="1594228129245" duration="2419000" />
       <workItem from="1594645890726" duration="114367000" />
-      <workItem from="1595546717408" duration="8523000" />
+      <workItem from="1595546717408" duration="36662000" />
     </task>
     <task id="LOCAL-00001" summary="Varias pruebas y programa establa, con IA de regresion y de Clasificacion">
       <created>1594228209447</created>
@@ -440,19 +662,20 @@
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_RegresionLogistica.coverage" NAME="AnalisisPrecision_RegresionLogistica Coverage Results" MODIFIED="1591042824110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$yahoo.coverage" NAME="yahoo Coverage Results" MODIFIED="1590413353326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea_Minutos.coverage" NAME="IAJacKInvEST_Linea_Minutos Coverage Results" MODIFIED="1595549118092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$GeneradorPredicciones.coverage" NAME="GeneradorPredicciones Coverage Results" MODIFIED="1595596047608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$GeneradorPredicciones.coverage" NAME="GeneradorPredicciones Coverage Results" MODIFIED="1595714037821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_KNN.coverage" NAME="AnalisisPrecision_KNN Coverage Results" MODIFIED="1589400547375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos.coverage" NAME="GeneradorDatos Coverage Results" MODIFIED="1595598751644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos.coverage" NAME="AnalisisPrecision_ArbolDatos Coverage Results" MODIFIED="1590517749345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1595601115726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonclient$JacKInvEST.coverage" NAME="JacKInvEST Coverage Results" MODIFIED="1595714272353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonclient$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1589211715832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
     <SUITE FILE_PATH="coverage/pythonclient$yahoo__1_.coverage" NAME="yahoo (1) Coverage Results" MODIFIED="1589248552371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST.coverage" NAME="IAJacKInvEST Coverage Results" MODIFIED="1589407822340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$BorradorArchivos.coverage" NAME="BorradorArchivos Coverage Results" MODIFIED="1589477094556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$DatosHistoricos.coverage" NAME="DatosHistoricos Coverage Results" MODIFIED="1584393168012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonclient$prueba1.coverage" NAME="prueba1 Coverage Results" MODIFIED="1595616120222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CODIGOS PRUEBA" />
     <SUITE FILE_PATH="coverage/pythonclient$AnalisisPrecision_ArbolDatos1dato.coverage" NAME="AnalisisPrecision_ArbolDatos1dato Coverage Results" MODIFIED="1590554905901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea.coverage" NAME="IAJacKInvEST_Linea Coverage Results" MODIFIED="1595510206814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
-    <SUITE FILE_PATH="coverage/pythonclient$PRUEBA_PY.coverage" NAME="PRUEBA.PY Coverage Results" MODIFIED="1595598788907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$IAJacKInvEST_Linea.coverage" NAME="IAJacKInvEST_Linea Coverage Results" MODIFIED="1595610932701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
+    <SUITE FILE_PATH="coverage/pythonclient$PRUEBA_PY.coverage" NAME="PRUEBA.PY Coverage Results" MODIFIED="1595610983802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
     <SUITE FILE_PATH="coverage/pythonclient$GeneradorDatos_Minutos.coverage" NAME="GeneradorDatos_Minutos Coverage Results" MODIFIED="1595544110730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IA" />
   </component>
 </project>

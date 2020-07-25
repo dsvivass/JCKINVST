@@ -153,6 +153,7 @@ for hora in horas:
 print(f'[MEJOR AJUSTE: {i} de {len(horas)}], Tiempo iteracion {time.time() - tini2}: ', )
 i=i+1
 
+print(df_org)
 print('Final tiempo, antes de graficar: ', time.time() - t0)
 print(f'[TIEMPO TOTAL: {time.time() - tini}]')
 Graficar(Predict[0], DatosReales)

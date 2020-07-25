@@ -125,13 +125,18 @@ for f in os.listdir():
 
 
 i, DatosReales, DatosPredict = 1, [], []
-horas = CadenaHoras(HInicial=(8,20,0), HFinal=(15,0,0))
+horas = CadenaHoras(HInicial=(4,0,0), HFinal=(15,0,0))
+print('tamano horas: ', len(horas))
 
 print('Tiempo inicial prediccion ')
-for hora in horas:
+for numero, hora in enumerate(horas):
 
     nombre_archivo = 'P{}_{}'.format(hora.replace(':',''), ult_archivo.group())
-    y = df[horas]
+    if horas.index(hora) >= horas.index('08:30:00'):
+        y = df[horas[horas.index('08:30:00'):]]
+    else:
+        y = df[horas[numero:]]
+    print(len(y))
     # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,3)),
     #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=20, x=x, y=y)
 

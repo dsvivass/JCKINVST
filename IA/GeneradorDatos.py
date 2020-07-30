@@ -82,6 +82,7 @@ class TestApp(EWrapper, EClient):
 def main():
     app = TestApp()
     app.connect('127.0.0.1', 7497, 0)
+    time.sleep(1)
     contract = Contract()
     contract.symbol = "AAPL"
     contract.secType = "STK"
@@ -96,6 +97,7 @@ def main():
 
     app.reqHistoricalData(1, contract, '', '1 D', '5 mins', 'MIDPOINT', 0, 1, True, [])  # MIDPOINT
     app.reqHistoricalData(1, contract, '', '1 D', '5 mins', 'TRADES', 0, 1, True, [])
+    time.sleep(1)
     # Timer(5, sys.exit(101)).start()
     app.run()
 

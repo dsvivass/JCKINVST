@@ -103,6 +103,7 @@ t0 = time.time()
 df = pd.DataFrame() # Creacion dataframe que almacena todos los datos
 DirAct = os.getcwd()
 os.chdir('DatosHistoricos/AAPL')
+# os.chdir('IA/DatosHistoricos/AAPL')
 ls = sorted(os.listdir())
 ult_archivo = re.search(r'([0-9])+', ls[-1])
 
@@ -119,6 +120,7 @@ df = OrganizadorDfGeneral(df)
 
 os.chdir(DirAct)
 os.chdir('Predicciones/AAPL')
+# os.chdir('IA/Predicciones/AAPL')
 for f in os.listdir():
     os.remove(f)
 
@@ -126,7 +128,6 @@ for f in os.listdir():
 
 i, DatosReales, DatosPredict = 1, [], []
 horas = CadenaHoras(HInicial=(4,0,0), HFinal=(15,0,0))
-print('tamano horas: ', len(horas))
 
 print('Tiempo inicial prediccion ')
 for numero, hora in enumerate(horas):
@@ -136,7 +137,6 @@ for numero, hora in enumerate(horas):
         y = df[horas[horas.index('08:30:00'):]]
     else:
         y = df[horas[numero:]]
-    print(len(y))
     # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,3)),
     #                                      alpha=[0.0001, 0.001, 0.01, 0.1, 1, 10, 100, 1000, 1000], cv=20, x=x, y=y)
 

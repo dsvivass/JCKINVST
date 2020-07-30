@@ -109,7 +109,7 @@ for file in ls:
 df = OrganizadorDfGeneral(df)
 
 
-x = df[CadenaHoras(HInicial=(4,0,0), HFinal=(8,20,0), paso_minutos=5)]
+x = df[CadenaHoras(HInicial=(4,0,0), HFinal=(8,45,0), paso_minutos=5)]
 # y = df[CadenaHoras(HInicial=(9,45,0), HFinal=(9,45,0))]
 #
 # MejorGrado, MejorAlpha = MejorAjuste(gradoPol=list(range(1,20)),

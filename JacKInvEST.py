@@ -28,6 +28,11 @@ df_org = pd.DataFrame()
 lista_min, lista_max, i = [], [], 0
 inversion = False
 p_inv, p_ven, tipo = None, None, None
+ganancias = 0
+# Rango en el cual quiero analizar minimos y maximos
+hora_inicial=(8, 30, 0)
+hora_final=(9, 30, 0)
+
 
 
 # Columnas
@@ -81,14 +86,14 @@ class TestApp(EWrapper, EClient):
     # -------------------------------------------------------- #
 
     def historicalData(self, reqId, bar):
-        global Data, DirActual, df_org, lista_min, lista_max, i, inversion, p_inv, p_ven, tipo
-        global compra
-        # print('contractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
-        #        bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
+        global Data, DirActual, df_org, lista_min, lista_max, i, inversion, p_inv, p_ven, tipo, hora_inicial, hora_final
+        global compra, ganancias
+        print('contractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
+               bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume)
         Dat = (bar.date, (bar.high + bar.low + bar.open + bar.close)/4) #Lista de datos del dia
         self.DataFrameHistoric(Dat) # Guarda los datos en un Dataframe y en un .txt
 
-        horas = CadenaHoras(HInicial=(8, 30, 0), HFinal=(15, 0, 0))
+        horas = CadenaHoras(HInicial=(8, 15, 0), HFinal=(15, 0, 0))
         if bar.date.split('  ')[1] in horas:
 
             nombre_archivo_actual = df_org.columns[-1].replace(':', '')
@@ -103,6 +108,22 @@ class TestApp(EWrapper, EClient):
             pipe = joblib.load(archivos_pred[0])
             Predict = pipe.predict(df_org[joblib.load(archivos_pred[1])])
 
+
+            # Rango en el cual quiero analizar minimos y maximos
+            horas_min_max = CadenaHoras(HInicial=hora_inicial, HFinal=hora_final)
+            min_ind = horas.index(horas_min_max[1])
+            try:
+                max_ind = horas.index(horas_min_max[-1])
+            except:
+                max_ind = horas.index('14:55:00')
+
+            if np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].max())[0][0] >= i:  # and i>i_min
+                lista_max.append(np.where(Predict[0][:max_ind+1] == Predict[0][min_ind:max_ind].max())[0][0])
+
+            if np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].min())[0][0] >= i:  # and i>i_min
+                lista_min.append(np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].min())[0][0])
+
+
             # __________________________________________________________________
             plt.plot(horas, Predict[0], 'b-', label='Datos Inteligencia Artificial')
             plt.axvline(i, color='r')
@@ -116,26 +137,16 @@ class TestApp(EWrapper, EClient):
             plt.axvline('08:30:00', color='r')
             plt.xticks(rotation=90)
 
-            # Rango en el cual quiero analizar minimos y maximos
-            horas_min_max = CadenaHoras(HInicial=(8, 30, 0), HFinal=(10, 0, 0))
-            min_ind = horas.index(horas_min_max[0])
-            max_ind = horas.index(horas_min_max[-1])
 
-
-            if np.where(Predict[0][:max_ind+1] == Predict[0][min_ind:max_ind+1].max())[0][0] > i - 1:  # and i>i_min
-                lista_max.append(np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].max())[0][0])
-
-            # if np.where(Predict[0] == Predict[0][i-1:].min())[0][0] > i-1 and i>i_min:
-            #     lista_min.append(np.where(Predict[0] == Predict[0][i-1:].min())[0][0])
-
-            if np.where(Predict[0][:max_ind+1] == Predict[0][min_ind:max_ind+1].min())[0][0] > i - 1:  # and i>i_min
-                lista_min.append(np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].min())[0][0])
+            plt.axvline(statistics.mean(lista_max), color='k')
+            plt.axvline(statistics.mean(lista_min), color='y')
+            try:
+                plt.axvspan(statistics.mean(lista_max)-statistics.stdev(lista_max), statistics.mean(lista_max)+statistics.stdev(lista_max), alpha=0.5, color='k')
+            except:
+                pass
 
             try:
-                plt.axvline(statistics.mean(lista_max), color='k')
-                plt.axvline(statistics.mean(lista_min), color='y')
-                plt.axvspan(statistics.mean(lista_max)-statistics.stdev(lista_max), statistics.mean(lista_max)+statistics.stdev(lista_max), alpha=0.5, color='k')
-                plt.axvspan(statistics.mean(lista_min)-statistics.stdev(lista_min), statistics.mean(lista_min)+statistics.stdev(lista_min), alpha=0.5, color='y')
+                plt.axvspan(statistics.mean(lista_min) - statistics.stdev(lista_min), statistics.mean(lista_min) + statistics.stdev(lista_min), alpha=0.5, color='y')
             except:
                 pass
 
@@ -144,31 +155,71 @@ class TestApp(EWrapper, EClient):
 
             # __________________________________________________________________
 
-            # Rango en el cual quiero analizar minimos y maximos
-            horas_min_max = CadenaHoras(HInicial=(8, 30, 0), HFinal=(10, 0, 0))
-            min_ind = horas.index(horas_min_max[0])
-            max_ind = horas.index(horas_min_max[-1])
+            try:
+                if tipo == 'C':
+                    print('Ganancia parcial: ', Predict[0][i] - Predict[0][p_inv])
+            except:
+                pass
 
-            if np.where(Predict[0][:max_ind + 1] == Predict[0][min_ind:max_ind + 1].max())[0][0] > i - 1:  # and i>i_min
-                lista_max.append(np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].max())[0][0])
+            try:
+                if tipo == 'P':
+                    print('Ganancia parcial: ', Predict[0][p_inv] - Predict[0][i])
+            except:
+                pass
 
-            # if np.where(Predict[0] == Predict[0][i-1:].min())[0][0] > i-1 and i>i_min:
-            #     lista_min.append(np.where(Predict[0] == Predict[0][i-1:].min())[0][0])
 
-            if np.where(Predict[0][:max_ind + 1] == Predict[0][min_ind:max_ind + 1].min())[0][0] > i - 1:  # and i>i_min
-                lista_min.append(np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].min())[0][0])
+            if inversion == True:
+                # decision = input('Desea sacar el dinero (s/n): ')
+                decision = 'n'
 
 
             try:
 
-                if i >= statistics.mean(lista_min) - statistics.stdev(lista_min) and i <= statistics.mean(
+                if len(lista_min) == 1 and inversion == False:
+                    if i >= statistics.mean(lista_min) and i <= statistics.mean(
+                            lista_min) and inversion == False:
+                        inversion = True
+                        p_inv = i
+                        tipo = 'C'
+                        print('INVERSION CALL')
+
+                elif len(lista_min) == 1 and (i >= statistics.mean(
+                        lista_max) or decision == 's') and inversion == True and tipo == 'C' :
+                    p_ven = i
+                    plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
+                    # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
+                    plt.axvline(i, color='r')
+                    plt.axvline(statistics.mean(lista_max), color='k')
+                    plt.axvline(statistics.mean(lista_min), color='y')
+                    plt.axvspan(statistics.mean(lista_max),
+                                statistics.mean(lista_max), alpha=0.5, color='k')
+                    plt.axvspan(statistics.mean(lista_min),
+                                statistics.mean(lista_min), alpha=0.5, color='y')
+
+                    plt.axhspan(Predict[0][p_inv], Predict[0][p_ven], color='g')
+                    plt.title(str(i))
+                    plt.show()
+                    print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+                    print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
+                    print('Dinero: ', Predict[0][p_ven] - Predict[0][p_inv])
+                    ganancias = ganancias + Predict[0][p_ven] - Predict[0][p_inv]
+                    print('Ganancias: ', ganancias)
+                    tipo = None
+                    hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+                    hora_final = (hora_inicial[0] + 1, hora_inicial[1], hora_inicial[2])
+                    print(hora_inicial, hora_final)
+                    lista_min, lista_max = [], []
+                    inversion = False
+                    # time.sleep(10)
+
+                elif i >= statistics.mean(lista_min) - statistics.stdev(lista_min) and i <= statistics.mean(
                         lista_min) + statistics.stdev(lista_min) and inversion == False:
                     inversion = True
                     p_inv = i
                     tipo = 'C'
                     print('INVERSION CALL')
-                elif i >= statistics.mean(lista_max) - statistics.stdev(lista_max) and i <= statistics.mean(
-                        lista_max) + statistics.stdev(lista_max) and inversion == True and tipo == 'C':
+                elif ((i >= statistics.mean(lista_max) - statistics.stdev(lista_max) and i <= statistics.mean(
+                        lista_max) + statistics.stdev(lista_max)) or decision == 's') and inversion == True and tipo == 'C':
                     p_ven = i
                     plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
                     # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
@@ -184,8 +235,63 @@ class TestApp(EWrapper, EClient):
                     plt.title(str(i))
                     plt.show()
                     print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+                    print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
                     print('Dinero: ', Predict[0][p_ven] - Predict[0][p_inv])
+                    ganancias = ganancias + Predict[0][p_ven] - Predict[0][p_inv]
+                    print('Ganancias: ', ganancias)
                     tipo = None
+                    hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+                    hora_final = (hora_inicial[0]+1, hora_inicial[1], hora_inicial[2])
+                    print(hora_inicial, hora_final)
+                    lista_min, lista_max = [], []
+                    inversion = False
+                    # time.sleep(10)
+
+            except Exception as e:
+                print('[EL PROBLEMA ES: call]', e)
+                pass
+
+            try:
+                if len(lista_max) == 1 and inversion == False:
+                    if i >= statistics.mean(lista_max) and i <= statistics.mean(
+                            lista_max) and inversion == False:
+                        inversion = True
+                        p_inv = i
+                        tipo = 'P'
+                        print('INVERSION PUT')
+
+                elif len(lista_max) == 1 and (i >= statistics.mean(
+                        lista_min) or decision == 's') and inversion == True and tipo == 'P':
+                    print('Adentro')
+                    p_ven = i
+                    print('len predict', len(Predict[0]))
+                    print('p_ven', p_ven)
+                    plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
+                    # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
+                    plt.axvline(i, color='r')
+                    plt.axvline(statistics.mean(lista_max), color='k')
+                    plt.axvline(statistics.mean(lista_min), color='y')
+                    plt.axvspan(statistics.mean(lista_max),
+                                statistics.mean(lista_max), alpha=0.5, color='k')
+                    plt.axvspan(statistics.mean(lista_min),
+                                statistics.mean(lista_min), alpha=0.5, color='y')
+
+                    plt.axhspan(Predict[0][p_inv], Predict[0][p_ven], color='g')
+                    plt.title(str(i))
+                    plt.show()
+                    print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+                    print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
+                    print('Dinero: ', Predict[0][p_inv] - Predict[0][p_ven])
+                    ganancias = ganancias + Predict[0][p_inv] - Predict[0][p_ven]
+                    print('Ganancias: ', ganancias)
+                    tipo = None
+                    hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+                    hora_final = (hora_inicial[0] + 1, hora_inicial[1], hora_inicial[2])
+                    print(hora_inicial, hora_final)
+                    lista_min, lista_max = [], []
+                    inversion = False
+                    # time.sleep(10)
+
 
                 if i >= statistics.mean(lista_max) - statistics.stdev(lista_max) and i <= statistics.mean(
                         lista_max) + statistics.stdev(lista_max) and inversion == False:
@@ -194,8 +300,8 @@ class TestApp(EWrapper, EClient):
                     tipo = 'P'
                     print('INVERSION PUT')
 
-                elif i >= statistics.mean(lista_min) - statistics.stdev(lista_min) and i <= statistics.mean(
-                        lista_min) + statistics.stdev(lista_min) and inversion == True and tipo == 'P':
+                elif ((i >= statistics.mean(lista_min) - statistics.stdev(lista_min) and i <= statistics.mean(
+                        lista_min) + statistics.stdev(lista_min)) or decision == 's') and inversion == True and tipo == 'P':
                     print('Adentro')
                     p_ven = i
                     print('len predict', len(Predict[0]))
@@ -214,11 +320,20 @@ class TestApp(EWrapper, EClient):
                     plt.title(str(i))
                     plt.show()
                     print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+                    print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
                     print('Dinero: ', Predict[0][p_inv] - Predict[0][p_ven])
-                    time.sleep(10)
+                    ganancias = ganancias + Predict[0][p_inv] - Predict[0][p_ven]
+                    print('Ganancias: ', ganancias)
                     tipo = None
+                    hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+                    hora_final = (hora_inicial[0] + 1, hora_inicial[1], hora_inicial[2])
+                    print(hora_inicial, hora_final)
+                    lista_min, lista_max = [], []
+                    inversion = False
+                    # time.sleep(10)
 
-            except:
+            except Exception as e:
+                print('[EL PROBLEMA ES: ]', e)
                 pass
             # __________________________________________________________________
 
@@ -226,9 +341,8 @@ class TestApp(EWrapper, EClient):
 
 
 
-
     def historicalDataUpdate(self, reqId, bar):
-        global Data, ult_bar_date, ult_Dat, checker, DataOrderStatus, PrecioMkt, df_org
+        global Data, ult_bar_date, ult_Dat, checker, DataOrderStatus, PrecioMkt, df_org, lista_min, lista_max, i, inversion, p_inv, p_ven, tipo, hora_inicial, hora_final, ganancias
 
         # print('AcontractDetails: ', reqId, ' ', 'Fecha: ', bar.date, ' ', 'Punto alto: ', bar.high, ' ', 'Punto bajo: ',
         #       bar.low, ' ', 'Punto apertura: ', bar.open, ' ', 'Punto cierre: ', bar.close, 'Volumen: ', bar.volume) # bar.date
@@ -249,6 +363,255 @@ class TestApp(EWrapper, EClient):
         ult_bar_date = bar.date
         ult_Dat = (bar.date, (bar.high + bar.low + bar.open + bar.close)/4)
         print('[CHECKER ES: {}]'.format(checker))
+
+        # ------------------------------------------------------------
+        # horas = CadenaHoras(HInicial=(8, 30, 0), HFinal=(15, 0, 0))
+        # if bar.date.split('  ')[1] in horas:
+        #
+        #     nombre_archivo_actual = df_org.columns[-1].replace(':', '')
+        #     ls = sorted(os.listdir(os.getcwd()))
+        #
+        #     archivos_pred = []
+        #     for f in ls:
+        #         if re.search(r'({})'.format(nombre_archivo_actual), f):
+        #             archivos_pred.append(f)
+        #     archivos_pred.sort()
+        #
+        #     pipe = joblib.load(archivos_pred[0])
+        #     Predict = pipe.predict(df_org[joblib.load(archivos_pred[1])])
+        #
+        #     # Rango en el cual quiero analizar minimos y maximos
+        #     horas_min_max = CadenaHoras(HInicial=hora_inicial, HFinal=hora_final)
+        #     min_ind = horas.index(horas_min_max[1])
+        #     try:
+        #         max_ind = horas.index(horas_min_max[-1])
+        #     except:
+        #         max_ind = horas.index('14:55:00')
+        #
+        #     if np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].max())[0][0] >= i:  # and i>i_min
+        #         lista_max.append(np.where(Predict[0][:max_ind + 1] == Predict[0][min_ind:max_ind].max())[0][0])
+        #
+        #     if np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].min())[0][0] >= i:  # and i>i_min
+        #         lista_min.append(np.where(Predict[0][:max_ind] == Predict[0][min_ind:max_ind].min())[0][0])
+        #
+        #     # __________________________________________________________________
+        #     plt.plot(horas, Predict[0], 'b-', label='Datos Inteligencia Artificial')
+        #     plt.axvline(i, color='r')
+        #     DatosReales = []
+        #     for hora in horas:
+        #         try:
+        #             DatosReales.append(df_org.loc[df_org.index[0], hora])
+        #         except:
+        #             DatosReales.append(df_org.loc[df_org.index[0]].max())
+        #     plt.plot(horas, DatosReales, 'g-', label='Datos Reales')
+        #     plt.axvline('08:30:00', color='r')
+        #     plt.xticks(rotation=90)
+        #
+        #     plt.axvline(statistics.mean(lista_max), color='k')
+        #     plt.axvline(statistics.mean(lista_min), color='y')
+        #     try:
+        #         plt.axvspan(statistics.mean(lista_max) - statistics.stdev(lista_max),
+        #                     statistics.mean(lista_max) + statistics.stdev(lista_max), alpha=0.5, color='k')
+        #     except:
+        #         pass
+        #
+        #     try:
+        #         plt.axvspan(statistics.mean(lista_min) - statistics.stdev(lista_min),
+        #                     statistics.mean(lista_min) + statistics.stdev(lista_min), alpha=0.5, color='y')
+        #     except:
+        #         pass
+        #
+        #     plt.show()
+        #     time.sleep(2)
+        #
+        #     # __________________________________________________________________
+        #
+        #     try:
+        #         if tipo == 'C':
+        #             print('Ganancia parcial: ', Predict[0][i] - Predict[0][p_inv])
+        #     except:
+        #         pass
+        #
+        #     try:
+        #         if tipo == 'P':
+        #             print('Ganancia parcial: ', Predict[0][p_inv] - Predict[0][i])
+        #     except:
+        #         pass
+        #
+        #     if inversion == True:
+        #         # decision = input('Desea sacar el dinero (s/n): ')
+        #         decision = 'n'
+        #
+        #     try:
+        #
+        #         if len(lista_min) == 1 and inversion == False:
+        #             if i >= statistics.mean(lista_min) and i <= statistics.mean(
+        #                     lista_min) and inversion == False:
+        #                 inversion = True
+        #                 p_inv = i
+        #                 tipo = 'C'
+        #                 print('INVERSION CALL')
+        #
+        #         elif len(lista_min) == 1 and (i >= statistics.mean(
+        #                 lista_max) or decision == 's') and inversion == True and tipo == 'C':
+        #             p_ven = i
+        #             plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
+        #             # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
+        #             plt.axvline(i, color='r')
+        #             plt.axvline(statistics.mean(lista_max), color='k')
+        #             plt.axvline(statistics.mean(lista_min), color='y')
+        #             plt.axvspan(statistics.mean(lista_max),
+        #                         statistics.mean(lista_max), alpha=0.5, color='k')
+        #             plt.axvspan(statistics.mean(lista_min),
+        #                         statistics.mean(lista_min), alpha=0.5, color='y')
+        #
+        #             plt.axhspan(Predict[0][p_inv], Predict[0][p_ven], color='g')
+        #             plt.title(str(i))
+        #             plt.show()
+        #             print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+        #             print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
+        #             print('Dinero: ', Predict[0][p_ven] - Predict[0][p_inv])
+        #             ganancias = ganancias + Predict[0][p_ven] - Predict[0][p_inv]
+        #             print('Ganancias: ', ganancias)
+        #             tipo = None
+        #             hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+        #             hora_final = (hora_inicial[0] + 1, hora_inicial[1], hora_inicial[2])
+        #             print(hora_inicial, hora_final)
+        #             lista_min, lista_max = [], []
+        #             inversion = False
+        #             # time.sleep(10)
+        #
+        #         elif i >= statistics.mean(lista_min) - statistics.stdev(lista_min) and i <= statistics.mean(
+        #                 lista_min) + statistics.stdev(lista_min) and inversion == False:
+        #             inversion = True
+        #             p_inv = i
+        #             tipo = 'C'
+        #             print('INVERSION CALL')
+        #         elif ((i >= statistics.mean(lista_max) - statistics.stdev(lista_max) and i <= statistics.mean(
+        #                 lista_max) + statistics.stdev(
+        #             lista_max)) or decision == 's') and inversion == True and tipo == 'C':
+        #             p_ven = i
+        #             plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
+        #             # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
+        #             plt.axvline(i, color='r')
+        #             plt.axvline(statistics.mean(lista_max), color='k')
+        #             plt.axvline(statistics.mean(lista_min), color='y')
+        #             plt.axvspan(statistics.mean(lista_max) - statistics.stdev(lista_max),
+        #                         statistics.mean(lista_max) + statistics.stdev(lista_max), alpha=0.5, color='k')
+        #             plt.axvspan(statistics.mean(lista_min) - statistics.stdev(lista_min),
+        #                         statistics.mean(lista_min) + statistics.stdev(lista_min), alpha=0.5, color='y')
+        #
+        #             plt.axhspan(Predict[0][p_inv], Predict[0][p_ven], color='g')
+        #             plt.title(str(i))
+        #             plt.show()
+        #             print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+        #             print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
+        #             print('Dinero: ', Predict[0][p_ven] - Predict[0][p_inv])
+        #             ganancias = ganancias + Predict[0][p_ven] - Predict[0][p_inv]
+        #             print('Ganancias: ', ganancias)
+        #             tipo = None
+        #             hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+        #             hora_final = (hora_inicial[0] + 1, hora_inicial[1], hora_inicial[2])
+        #             print(hora_inicial, hora_final)
+        #             lista_min, lista_max = [], []
+        #             inversion = False
+        #             # time.sleep(10)
+        #
+        #     except Exception as e:
+        #         print('[EL PROBLEMA ES: call]', e)
+        #         pass
+        #
+        #     try:
+        #         if len(lista_max) == 1 and inversion == False:
+        #             if i >= statistics.mean(lista_max) and i <= statistics.mean(
+        #                     lista_max) and inversion == False:
+        #                 inversion = True
+        #                 p_inv = i
+        #                 tipo = 'P'
+        #                 print('INVERSION PUT')
+        #
+        #         elif len(lista_max) == 1 and (i >= statistics.mean(
+        #                 lista_min) or decision == 's') and inversion == True and tipo == 'P':
+        #             print('Adentro')
+        #             p_ven = i
+        #             print('len predict', len(Predict[0]))
+        #             print('p_ven', p_ven)
+        #             plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
+        #             # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
+        #             plt.axvline(i, color='r')
+        #             plt.axvline(statistics.mean(lista_max), color='k')
+        #             plt.axvline(statistics.mean(lista_min), color='y')
+        #             plt.axvspan(statistics.mean(lista_max),
+        #                         statistics.mean(lista_max), alpha=0.5, color='k')
+        #             plt.axvspan(statistics.mean(lista_min),
+        #                         statistics.mean(lista_min), alpha=0.5, color='y')
+        #
+        #             plt.axhspan(Predict[0][p_inv], Predict[0][p_ven], color='g')
+        #             plt.title(str(i))
+        #             plt.show()
+        #             print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+        #             print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
+        #             print('Dinero: ', Predict[0][p_inv] - Predict[0][p_ven])
+        #             ganancias = ganancias + Predict[0][p_inv] - Predict[0][p_ven]
+        #             print('Ganancias: ', ganancias)
+        #             tipo = None
+        #             hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+        #             hora_final = (hora_inicial[0] + 1, hora_inicial[1], hora_inicial[2])
+        #             print(hora_inicial, hora_final)
+        #             lista_min, lista_max = [], []
+        #             inversion = False
+        #             # time.sleep(10)
+        #
+        #         if i >= statistics.mean(lista_max) - statistics.stdev(lista_max) and i <= statistics.mean(
+        #                 lista_max) + statistics.stdev(lista_max) and inversion == False:
+        #             inversion = True
+        #             p_inv = i
+        #             tipo = 'P'
+        #             print('INVERSION PUT')
+        #
+        #         elif ((i >= statistics.mean(lista_min) - statistics.stdev(lista_min) and i <= statistics.mean(
+        #                 lista_min) + statistics.stdev(
+        #             lista_min)) or decision == 's') and inversion == True and tipo == 'P':
+        #             print('Adentro')
+        #             p_ven = i
+        #             print('len predict', len(Predict[0]))
+        #             print('p_ven', p_ven)
+        #             plt.plot(list(range(len(Predict[0]))), Predict[0], color='blue')
+        #             # plt.plot(list(range(len(Predict[0]))), df_org.values[0][-600:], color='green')
+        #             plt.axvline(i, color='r')
+        #             plt.axvline(statistics.mean(lista_max), color='k')
+        #             plt.axvline(statistics.mean(lista_min), color='y')
+        #             plt.axvspan(statistics.mean(lista_max) - statistics.stdev(lista_max),
+        #                         statistics.mean(lista_max) + statistics.stdev(lista_max), alpha=0.5, color='k')
+        #             plt.axvspan(statistics.mean(lista_min) - statistics.stdev(lista_min),
+        #                         statistics.mean(lista_min) + statistics.stdev(lista_min), alpha=0.5, color='y')
+        #
+        #             plt.axhspan(Predict[0][p_inv], Predict[0][p_ven], color='g')
+        #             plt.title(str(i))
+        #             plt.show()
+        #             print('p_inv: ', p_inv, ', p_ven: ', p_ven)
+        #             print('p_inv: ', horas[p_inv], ', p_ven: ', horas[p_ven])
+        #             print('Dinero: ', Predict[0][p_inv] - Predict[0][p_ven])
+        #             ganancias = ganancias + Predict[0][p_inv] - Predict[0][p_ven]
+        #             print('Ganancias: ', ganancias)
+        #             tipo = None
+        #             hora_inicial = tuple(map(int, horas[p_ven].split(':')))
+        #             hora_final = (hora_inicial[0] + 1, hora_inicial[1], hora_inicial[2])
+        #             print(hora_inicial, hora_final)
+        #             lista_min, lista_max = [], []
+        #             inversion = False
+        #             # time.sleep(10)
+        #
+        #     except Exception as e:
+        #         print('[EL PROBLEMA ES: ]', e)
+        #         pass
+        #     # __________________________________________________________________
+        #
+        #     i += 1
+
+
+
+
         # Condicion para llamar a metodo de Colocacion de ordenes
         # if Data['Punto cierre: '].iloc[-1] > 1.075 and checker is None :
         #     PrecioMkt = Data['Punto cierre: '].iloc[-1]
@@ -552,7 +915,7 @@ def main():
 
     # app.reqHistoricalData(1, contract, '', '1 D', '5 mins', 'MIDPOINT', 0, 1, True, []) # -------> FUNCIONA PARA TIEMPO REAL
 
-    app.reqHistoricalData(1, contract, '20200713 23:59:59 GMT', '1 D', '5 mins', 'MIDPOINT', 0, 1, False, [])
+    app.reqHistoricalData(1, contract, '20200624 23:59:59 GMT', '1 D', '5 mins', 'MIDPOINT', 0, 1, False, [])
     time.sleep(1)
     # app.reqContractDetails(7, contract.OptionForQuery())
     # app.reqSecDefOptParams(2, "AMD", "", "STK", 8314)
